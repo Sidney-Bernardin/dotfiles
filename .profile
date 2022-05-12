@@ -1,13 +1,3 @@
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
-
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
-#umask 022
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -26,13 +16,18 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Aliases.
 alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+# Golang environment.
 export PATH=$PATH:/usr/local/go/bin
 
+# Node environment.
 VERSION=v16.15.0
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
+# FZF config.
 export FZF_DEFAULT_COMMAND="find * -type f -not -path '*/\.*'"
 export FZF_DEFAULT_OPTS="--no-height"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
