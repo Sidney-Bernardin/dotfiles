@@ -19,10 +19,10 @@ fi
 # Aliases.
 alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
-# Golang environment.
+# Golang env.
 export PATH=$PATH:/usr/local/go/bin
 
-# Node environment.
+# Node env.
 VERSION=v16.15.0
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
@@ -35,5 +35,5 @@ export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'"
 export FZF_ALT_C_COMMAND="find * -type d -not -path '*/\.*'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
-# Flutter environment.
+# Flutter env.
 export PATH="$PATH:`pwd`/flutter/bin"
