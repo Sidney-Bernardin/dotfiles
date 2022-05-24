@@ -1,4 +1,4 @@
-" Install vim-plug automatically.
+" ========== Install vim-plug automatically. ========== "
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -7,6 +7,7 @@ endif
 
 
 
+" ========== Plugins. ========== "
 call plug#begin('~/.vim/plugged')
 
 " What would I do without you.
@@ -21,16 +22,27 @@ Plug 'junegunn/fzf.vim'
 " Git.
 Plug 'tpope/vim-fugitive'
 
-" Lanuage specific.
+" Code completion.
+Plug 'jiangmiao/auto-pairs'
+
+" Golang.
 Plug 'fatih/vim-go'
+
+" Vue.
 Plug 'posva/vim-vue'
+
+" Godot.
 Plug 'habamax/vim-godot'
+
+" OmniSharp.
 Plug 'OmniSharp/omnisharp-vim'
+
+" Dart/Flutter.
+Plug 'natebosch/dartlang-snippets'
 
 " Other.
 Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline'
 Plug 'machakann/vim-highlightedyank'
-Plug 'jiangmiao/auto-pairs'
 
 call plug#end()

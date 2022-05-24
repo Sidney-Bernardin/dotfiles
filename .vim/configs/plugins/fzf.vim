@@ -1,3 +1,5 @@
+" ========== FZF configuration ========== "
+
 let $FZF_DEFAULT_OPTS='--reverse'
 
 nnoremap <leader>f :Files<CR>

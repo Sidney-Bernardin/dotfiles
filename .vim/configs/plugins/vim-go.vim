@@ -1,3 +1,5 @@
+" ========== Vim Go configuration. ========== "
+
 " Let coc handle this functionality.
 let g:go_def_mapping_enabled = 0
 

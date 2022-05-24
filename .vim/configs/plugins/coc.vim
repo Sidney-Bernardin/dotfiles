@@ -1,4 +1,6 @@
-let g:coc_global_extensions = [ 'coc-go', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-json', 'coc-emmet', 'coc-vetur', 'coc-godot', 'coc-pyright' ]
+" ========== COC configuration. ========== "
+
+let g:coc_global_extensions = [ 'coc-go', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-json', 'coc-emmet', 'coc-vetur', 'coc-godot', 'coc-pyright', 'coc-flutter']
 
 " Coc snippets.
 let g:coc_snippet_next = '<tab>'
