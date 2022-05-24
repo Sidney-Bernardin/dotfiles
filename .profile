@@ -34,3 +34,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'"
 export FZF_ALT_C_COMMAND="find * -type d -not -path '*/\.*'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
+
+# Flutter environment.
+export PATH="$PATH:`pwd`/flutter/bin"
