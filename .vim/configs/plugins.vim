@@ -24,6 +24,7 @@ Plug 'tpope/vim-fugitive'
 
 " Code completion.
 Plug 'jiangmiao/auto-pairs'
+Plug 'honza/vim-snippets'
 
 " Golang.
 Plug 'fatih/vim-go'
@@ -36,9 +37,6 @@ Plug 'habamax/vim-godot'
 
 " OmniSharp.
 Plug 'OmniSharp/omnisharp-vim'
-
-" Dart/Flutter.
-Plug 'natebosch/dartlang-snippets'
 
 " Other.
 Plug 'unblevable/quick-scope'
