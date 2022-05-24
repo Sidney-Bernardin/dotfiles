@@ -6,6 +6,7 @@ let g:coc_global_extensions = [ 'coc-go', 'coc-tsserver', 'coc-html', 'coc-css',
 let g:coc_snippet_next = '<tab>'
 
 " Remap keys for gotos.
+nmap <leader>rn <Plug>(coc-rename)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
