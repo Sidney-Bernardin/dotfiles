@@ -20,9 +20,6 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <silent><leader>+ :vertical resize =5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 
-" Show registers.
-nnoremap <leader>r :reg<CR>
-
 " Move line up or down.
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
