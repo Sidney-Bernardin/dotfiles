@@ -14,3 +14,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Confirm completion with enter.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Code actions.
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
