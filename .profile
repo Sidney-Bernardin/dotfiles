@@ -19,6 +19,9 @@ fi
 # Aliases.
 alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+# Keybinds.
+bind '"\C-p":"new-project-session\n"'
+
 # Golang env.
 export PATH=$PATH:/usr/local/go/bin
 
