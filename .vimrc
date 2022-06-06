@@ -15,5 +15,6 @@ source ~/.vim/configs/plugin_configs/vim-highlightedyank.vim
 source ~/.vim/configs/plugin_configs/coc.vim
 source ~/.vim/configs/plugin_configs/vim-fugitive.vim
 source ~/.vim/configs/plugin_configs/omnisharp.vim
+source ~/.vim/configs/plugin_configs/vim-airline.vim
 
 colorscheme gruvbox
