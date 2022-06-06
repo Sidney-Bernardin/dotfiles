@@ -1,2 +1,0 @@
-" ========== Colorscheme configuration. ========== "
-colorscheme gruvbox

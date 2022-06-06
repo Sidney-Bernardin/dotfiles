@@ -1,46 +1,44 @@
-" ========== Remaps. ========== "
-"
-" Leader-key!
+" ===== Leader-key! ===== "
 let mapleader=" "
 
-" Quick save.
+" ===== Quick save. ===== "
 noremap <leader>s :w<CR>
 
-" Buffer jumping.
+" ===== Buffer navigation. ===== "
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
-" Window jumping.
+" ===== Window navigation. ===== "
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-" Window resize.
+" ===== Window resizing. ===== "
 nnoremap <silent><leader>+ :vertical resize =5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
 
-" Move line up or down.
+" ===== Move line up or down. ===== "
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" Greatest remap ever.
+" ===== Greatest remap ever. ===== "
 vnoremap <leader>p "_dP
 
-" Quickfix list.
+" ===== Quickfix List navigation. ===== "
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
 
-" Nice...
+" ===== Nice... ===== "
 inoremap {<cr> {<cr>}<c-o>O
 
-" Center screen.
+" ===== Center screen. ===== "
 nnoremap G Gzz
 
-" Undo break points.
+" ===== Undo break points. ===== "
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
 
-" Jumplist mutations.
+" ===== Jumplist mutations. ===== "
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'

@@ -1,46 +1,37 @@
-" ========== Install vim-plug automatically. ========== "
+" ===== Install vim-plug automatically. ===== "
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
-
-" ========== Plugins. ========== "
 call plug#begin('~/.vim/plugged')
 
-" What would I do without you.
+" ===== What would I do without you. ===== "
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Search and replace.
+" ===== Search and replace. ===== "
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Git.
+" ===== Git ===== "
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 
-" Code completion.
-Plug 'jiangmiao/auto-pairs'
-Plug 'honza/vim-snippets'
-
-" Golang.
+" ===== Programing languages and frameworks. ===== "
 Plug 'fatih/vim-go'
-
-" Vue.
 Plug 'posva/vim-vue'
-
-" Godot.
 Plug 'habamax/vim-godot'
-
-" OmniSharp.
 Plug 'OmniSharp/omnisharp-vim'
 
-" Other.
+" ===== Code completion. ===== "
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
-Plug 'vim-airline/vim-airline'
+
+" ===== Flash Step ===== "
 Plug 'machakann/vim-highlightedyank'
 
 call plug#end()

@@ -1,4 +1,3 @@
-" ========== (set)tings. ========== "
 set background=dark
 set hidden
 set pastetoggle=<F3>
