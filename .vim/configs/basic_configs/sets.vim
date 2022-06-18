@@ -18,6 +18,7 @@ set incsearch
 set scrolloff=8
 set signcolumn=yes
 autocmd FileType cs set signcolumn=no
+autocmd FileType dart set tabstop=2 softtabstop=2 shiftwidth=2
 set isfname+=@-@
 set cmdheight=1
 set updatetime=50
