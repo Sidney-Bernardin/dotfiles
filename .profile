@@ -19,7 +19,7 @@ fi
 # Aliases.
 alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
-# Keybinds.
+# Binds.
 bind '"\C-p":"open-project-in-tmux\n"'
 
 # Golang env.
@@ -32,7 +32,7 @@ VERSION=v16.17.0
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
-# FZF config.
+# FZF env.
 export FZF_DEFAULT_COMMAND="find * -type f -not -path '*/\.*'"
 export FZF_DEFAULT_OPTS="--no-height"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
