@@ -1,7 +1,10 @@
--- Quick telescope prompt.
+-- Prompt.
 vim.api.nvim_set_keymap('n', '<leader>t', ':Telescope ', {})
 
--- Search nvim config.
+-- Find in another directory prompt.
+vim.api.nvim_set_keymap('n', '<leader>f', ':Telescope find_files cwd=', {})
+
+-- Find in nvim config.
 vim.api.nvim_set_keymap('n', '<leader>c', ':Telescope find_files cwd=~/.config/nvim<CR>', {})
 
 -- Find all of the things.

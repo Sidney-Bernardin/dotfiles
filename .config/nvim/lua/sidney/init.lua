@@ -1,6 +1,7 @@
 require("sidney.sets")
 require("sidney.packer")
-require("sidney.nvim_lsp_and_cmp")
+require("sidney.lsp")
+require("sidney.cmp")
 require("sidney.auto_pairs")
 require("sidney.key_maps")
 require("sidney.auto_commands")
