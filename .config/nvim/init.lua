@@ -1,2 +1,1 @@
-require("sidney")
--- hello world
+require('sidney')
