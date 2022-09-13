@@ -5,9 +5,13 @@ return require('packer').startup(function(use)
 
     -- Color Scheme
     use 'morhetz/gruvbox'
+    use 'nvim-treesitter/nvim-treesitter'
 
-    -- Nvim LSP and CMP
-    use 'neovim/nvim-lspconfig'
+    -- Nvim LSP
+    use "neovim/nvim-lspconfig"
+    use "williamboman/nvim-lsp-installer"
+
+    -- Completion
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -15,20 +19,14 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
 
-    -- Plenary
-    use 'nvim-lua/plenary.nvim'
+    -- Formatting
+    use 'prettier/vim-prettier'
 
-    -- Telescope    
+    -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
-
-    -- Treesitter
-    use 'nvim-treesitter/nvim-treesitter'
-
-    -- Status Bar
-    use 'vim-airline/vim-airline'
 
     -- Git
     use 'tpope/vim-fugitive'
@@ -36,9 +34,14 @@ return require('packer').startup(function(use)
     -- Flash Step!
     use 'windwp/nvim-autopairs'
     use 'unblevable/quick-scope'
-    use 'machakann/vim-highlightedyank'
     use {
         'ThePrimeagen/harpoon',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
+
+    -- Cool Stuff
+    use 'nvim-lua/plenary.nvim'
+    use 'vim-airline/vim-airline'
+    use 'machakann/vim-highlightedyank'
+    use 'simrat39/symbols-outline.nvim'
 end)

@@ -1,2 +1,2 @@
 -- Set colorscheme.
-vim.cmd("colorscheme gruvbox")
+vim.cmd('colorscheme gruvbox')

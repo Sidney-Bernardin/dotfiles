@@ -4,7 +4,7 @@ vim.opt.background = 'dark'
 -- Cursor
 vim.opt.scrolloff = 8
 vim.opt.guicursor = ''
-vim.opt.cursorline = true
+--vim.opt.cursorline = true
 
 -- Line Numbers
 vim.opt.nu = true
@@ -27,4 +27,4 @@ vim.opt.wrap = false
 vim.opt.cc = '80'
 
 -- Past
-vim.opt.pastetoggle='<F3>'
+vim.opt.pastetoggle = '<F3>'
