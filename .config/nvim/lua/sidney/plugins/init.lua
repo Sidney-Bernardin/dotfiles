@@ -1,0 +1,5 @@
+require('sidney.plugins.auto_pairs')
+require('sidney.plugins.cmp')
+require('sidney.plugins.symbols_outline')
+require('sidney.plugins.telescope')
+require('sidney.plugins.treesitter')
