@@ -41,7 +41,10 @@ return require('packer').startup(function(use)
 
     -- Cool Stuff
     use 'nvim-lua/plenary.nvim'
-    use 'vim-airline/vim-airline'
     use 'machakann/vim-highlightedyank'
     use 'simrat39/symbols-outline.nvim'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 end)
