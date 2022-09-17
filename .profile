@@ -31,11 +31,3 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$CARGO
 VERSION=v16.17.0
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
-
-# FZF env.
-export FZF_DEFAULT_COMMAND="find * -type f -not -path '*/\.*'"
-export FZF_DEFAULT_OPTS="--no-height"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'"
-export FZF_ALT_C_COMMAND="find * -type d -not -path '*/\.*'"
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
