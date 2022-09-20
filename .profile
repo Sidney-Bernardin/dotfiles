@@ -32,5 +32,5 @@ VERSION=v16.17.0
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
-# Starship
+# Starship shell prompt.
 eval "$(starship init bash)"
