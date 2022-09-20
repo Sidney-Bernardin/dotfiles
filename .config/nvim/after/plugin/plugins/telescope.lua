@@ -8,7 +8,7 @@ keymap('n', '<leader>t', ':Telescope ', opts)
 keymap('n', '<leader>f', ':Telescope find_files cwd=', opts)
 
 -- Find in nvim config.
-keymap('n', '<leader>c', ':Telescope find_files cwd=~/.config/nvim<CR>', opts)
+keymap('n', '<leader>fc', ':Telescope find_files cwd=~/.config/nvim<CR>', opts)
 
 -- Find all of the things.
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)

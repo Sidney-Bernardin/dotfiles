@@ -16,18 +16,21 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Aliases.
+# Aliases
 alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
-# Binds.
+# Binds
 bind '"\C-p":"open-project-in-tmux\n"'
 
-# Golang env.
+# Golang ENV
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$CARGO
 
-# Node env.
+# Node ENV
 VERSION=v16.17.0
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
+
+# Starship
+eval "$(starship init bash)"

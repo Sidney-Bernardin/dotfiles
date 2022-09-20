@@ -5,7 +5,6 @@ return require('packer').startup(function(use)
 
     -- Color Scheme
     use 'morhetz/gruvbox'
-    use 'nvim-treesitter/nvim-treesitter'
 
     -- Nvim LSP
     use "neovim/nvim-lspconfig"
@@ -19,12 +18,21 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
 
+    -- Treesitter
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'nvim-treesitter/nvim-treesitter-context'
+
     -- Formatting
     use 'prettier/vim-prettier'
 
-    -- Telescope
+
+    -- File Navigation.
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+    use {
+        'ThePrimeagen/harpoon',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
@@ -34,10 +42,6 @@ return require('packer').startup(function(use)
     -- Flash Step!
     use 'windwp/nvim-autopairs'
     use 'unblevable/quick-scope'
-    use {
-        'ThePrimeagen/harpoon',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
 
     -- Cool Stuff
     use 'nvim-lua/plenary.nvim'
