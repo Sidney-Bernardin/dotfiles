@@ -12,8 +12,8 @@ local function on_attach()
     -- LSP keymaps.
     keymap("n", "<leader>a", vim.lsp.buf.code_action, opts)
     keymap("n", "<leader>i", vim.lsp.buf.hover, opts)
-    keymap("n", "<leader>gd", vim.lsp.buf.definition, opts)
-    keymap("n", "<leader>gt", vim.lsp.buf.type_definition, opts)
+    keymap("n", "gd", vim.lsp.buf.definition, opts)
+    keymap("n", "gt", vim.lsp.buf.type_definition, opts)
     keymap("n", "<leader>gi", vim.lsp.buf.implementation, opts)
     keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
 

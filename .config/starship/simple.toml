@@ -1,0 +1,25 @@
+# Get editor completions based on the config schema.
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "[$username@$hostname[  ](fg:#ffffff)](bold fg:10)[$git_branch](fg:5)$directory "
+
+# Don't insert blank line between prompts.
+add_newline = false
+
+[git_branch]
+symbol = ""
+format = "$symbol $branch(:$remote_branch) [ ](fg:#ffffff)"
+
+[directory]
+style = "fg:4"
+truncation_length = 15
+
+[username]
+style_user = "bold bg:66 fg:232"
+style_root = "bold bg:66 fg:232"
+format = "$user"
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "$ssh_symbol$hostname"

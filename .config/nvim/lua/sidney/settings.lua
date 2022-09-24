@@ -9,6 +9,7 @@ opt.background = 'dark'
 -- Cursor
 opt.scrolloff = 8
 opt.guicursor = ''
+opt.cursorline = true
 
 -- Line Numbers
 opt.nu = true

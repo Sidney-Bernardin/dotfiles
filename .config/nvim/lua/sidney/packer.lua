@@ -41,7 +41,8 @@ return require('packer').startup(function(use)
 
     -- Flash Step!
     use 'windwp/nvim-autopairs'
-    use 'unblevable/quick-scope'
+    -- use 'unblevable/quick-scope'
+    use 'jinh0/eyeliner.nvim'
 
     -- Cool Stuff
     use 'nvim-lua/plenary.nvim'
