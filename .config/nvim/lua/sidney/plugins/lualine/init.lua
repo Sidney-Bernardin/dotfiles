@@ -1,4 +1,8 @@
--- sections = { lualine_c = { "%{pathshorten(expand('%F'), 3)}" } }
+-- require('lualine').setup({})
 
-require('lualine').setup(require('sidney.plugins.lualine.gruvbox_simple'))
---require('lualine').setup({})
+-- Simple config with a Gruvbox theme.
+require('lualine').setup(require('sidney.plugins.lualine.simple')({
+    bg = 237, -- Gruvbox bg1.
+    fg = 223, -- Gruvbox fg1.
+    mode_change = 214, -- Gruvbox yellow.
+}))

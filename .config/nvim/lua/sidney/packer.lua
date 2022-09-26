@@ -46,7 +46,6 @@ return require('packer').startup(function(use)
 
     -- Cool Stuff
     use 'nvim-lua/plenary.nvim'
-    use 'machakann/vim-highlightedyank'
     use 'simrat39/symbols-outline.nvim'
     use {
         'nvim-lualine/lualine.nvim',

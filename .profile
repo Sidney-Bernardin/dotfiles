@@ -33,6 +33,6 @@ DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
 # Starship shell prompt.
-export STARSHIP_CONFIG=~/.config/starship/simple.toml
-# export STARSHIP_CONFIG=~/.config/starship/gruvbox.toml
+export STARSHIP_CONFIG=~/.config/starship/simple.toml # Simple configuration.
+# export STARSHIP_CONFIG=~/.config/starship/gruvbox.toml # Gruvbox configuration.
 eval "$(starship init bash)"
