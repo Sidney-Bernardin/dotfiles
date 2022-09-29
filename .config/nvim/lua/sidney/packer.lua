@@ -7,8 +7,18 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
 
     -- Nvim LSP
-    use "neovim/nvim-lspconfig"
-    use "williamboman/nvim-lsp-installer"
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/nvim-lsp-installer'
+    use({
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        config = function()
+            local saga = require("lspsaga")
+            saga.init_lsp_saga({
+                code_action_icon = "",
+            })
+        end,
+    })
 
     -- Completion
     use 'hrsh7th/nvim-cmp'
@@ -25,7 +35,6 @@ return require('packer').startup(function(use)
     -- Formatting
     use 'prettier/vim-prettier'
 
-
     -- File Navigation.
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -41,7 +50,7 @@ return require('packer').startup(function(use)
 
     -- Flash Step!
     use 'windwp/nvim-autopairs'
-    -- use 'unblevable/quick-scope'
+    use 'unblevable/quick-scope'
     use 'jinh0/eyeliner.nvim'
 
     -- Cool Stuff

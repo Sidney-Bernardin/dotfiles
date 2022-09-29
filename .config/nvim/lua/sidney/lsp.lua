@@ -10,12 +10,12 @@ local function on_attach()
     keymap('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
     -- LSP keymaps.
-    keymap("n", "<leader>a", vim.lsp.buf.code_action, opts)
+    keymap("n", "<leader>a", ":Lspsaga code_action<CR>", opts)
     keymap("n", "<leader>i", vim.lsp.buf.hover, opts)
     keymap("n", "gd", vim.lsp.buf.definition, opts)
     keymap("n", "gt", vim.lsp.buf.type_definition, opts)
     keymap("n", "<leader>gi", vim.lsp.buf.implementation, opts)
-    keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
+    keymap("n", "<leader>rn", ":Lspsaga rename<CR>", opts)
 
     -- Formatting on save.
     vim.api.nvim_create_autocmd('BufWritePre', {

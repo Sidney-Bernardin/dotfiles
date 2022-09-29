@@ -1,6 +1,3 @@
--- Leader key!
-vim.g.mapleader = " "
-
 local opt = vim.opt
 
 -- Background
@@ -16,7 +13,7 @@ opt.nu = true
 opt.relativenumber = true
 opt.signcolumn = "yes"
 
--- Tab
+-- Tabs
 opt.smartindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -31,5 +28,5 @@ opt.incsearch = true
 opt.wrap = false
 opt.cc = '80'
 
--- Past
+-- Pasting
 opt.pastetoggle = '<F3>'
