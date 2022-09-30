@@ -1,6 +1,18 @@
+-- [[ ===== Global ===== ]] --
+
+-- Leader key!
+vim.g.mapleader = " "
+
+-- Snippets
+vim.g.snippets = 'luasnip'
+
+
+
+-- [[ ===== Options ===== ]] --
+
 local opt = vim.opt
 
--- Background
+-- Basics
 opt.background = 'dark'
 
 -- Cursor
@@ -11,7 +23,7 @@ opt.cursorline = true
 -- Line Numbers
 opt.nu = true
 opt.relativenumber = true
-opt.signcolumn = "yes"
+opt.signcolumn = 'yes'
 
 -- Tabs
 opt.smartindent = true

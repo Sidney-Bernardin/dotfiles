@@ -1,9 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true }
 
--- Leader key!
-vim.g.mapleader = " "
-
 -- Quick save.
 keymap('n', '<leader>s', ':w<CR>', opts)
 

@@ -1,6 +1,6 @@
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
-local cmp = require 'cmp'
+local cmp = require('cmp')
 
 cmp.setup({
     snippet = {

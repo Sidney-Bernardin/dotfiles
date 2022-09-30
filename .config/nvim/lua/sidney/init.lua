@@ -1,4 +1,6 @@
-require('sidney.options')
+require('sidney.settings')
+require('sidney.keymaps')
+require('sidney.auto_commands')
 require('sidney.packer')
 require('sidney.plugins')
-require('sidney.lsp')
+require('sidney.native_lsp')
