@@ -1,4 +1,4 @@
--- Enable highlighted yank.
+-- Enable Highlight Yank.
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
         vim.highlight.on_yank({ higroup = "HighlightYank", timeout = 300 })

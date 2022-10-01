@@ -6,25 +6,24 @@ return require('packer').startup(function(use)
     -- Color Scheme
     use('morhetz/gruvbox')
 
-    -- Nvim LSP
-    use('neovim/nvim-lspconfig')
-    use('williamboman/nvim-lsp-installer')
-    use({ "glepnir/lspsaga.nvim", branch = "main" })
-
-    -- Completion
+    -- nvim-cmp
     use('hrsh7th/nvim-cmp')
     use('hrsh7th/cmp-nvim-lsp')
     use('hrsh7th/cmp-buffer')
     use('hrsh7th/cmp-path')
     use('saadparwaiz1/cmp_luasnip')
+
+    -- Snippets
     use('L3MON4D3/LuaSnip')
+
+    -- LSP
+    use('neovim/nvim-lspconfig')
+    use('williamboman/nvim-lsp-installer')
+    use({ 'jose-elias-alvarez/null-ls.nvim', branch = 'main' })
 
     -- Treesitter
     use('nvim-treesitter/nvim-treesitter')
     use('nvim-treesitter/nvim-treesitter-context')
-
-    -- Formatting
-    use('prettier/vim-prettier')
 
     -- File Navigation.
     use({ 'nvim-telescope/telescope.nvim', tag = '0.1.0' })
