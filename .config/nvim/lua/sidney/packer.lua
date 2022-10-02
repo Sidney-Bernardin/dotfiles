@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
 
     -- Snippets
     use('L3MON4D3/LuaSnip')
+    use('rafamadriz/friendly-snippets')
 
     -- LSP
     use('neovim/nvim-lspconfig')

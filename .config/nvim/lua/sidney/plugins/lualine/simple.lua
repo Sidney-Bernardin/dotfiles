@@ -2,7 +2,7 @@ return function(colors)
     local config = {
         options = {
             theme = {
-                normal  = { a = { bg = colors.bg } },
+                normal  = { a = { bg = colors.bg, fg = colors.fg } },
                 insert  = { a = { bg = colors.bg, fg = colors.mode_change } },
                 visual  = { a = { bg = colors.bg, fg = colors.mode_change } },
                 replace = { a = { bg = colors.bg, fg = colors.mode_change } },

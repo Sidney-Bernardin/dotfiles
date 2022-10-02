@@ -1,10 +1,14 @@
+vim.fn.sign_define('DiagnosticSignError', { texthl = 'DiagnosticSignError', text = '', numhl = '' })
+vim.fn.sign_define('DiagnosticSignWarn', { texthl = 'DiagnosticSignWarn', text = '', numhl = '' })
+vim.fn.sign_define('DiagnosticSignHint', { texthl = 'DiagnosticSignHint', text = '', numhl = '' })
+vim.fn.sign_define('DiagnosticSignInfo', { texthl = 'DiagnosticSignInfo', text = '', numhl = '' })
+
+
+
 -- [[ ===== Global ===== ]] --
 
 -- Leader key!
 vim.g.mapleader = " "
-
--- Snippets
-vim.g.snippets = 'luasnip'
 
 
 
@@ -14,6 +18,9 @@ local opt = vim.opt
 
 -- Basics
 opt.background = 'dark'
+
+-- Mouse
+opt.mouse = nil
 
 -- Cursor
 opt.scrolloff = 8
@@ -42,3 +49,6 @@ opt.cc = '80'
 
 -- Pasting
 opt.pastetoggle = '<F3>'
+
+-- Bars
+opt.laststatus = 3

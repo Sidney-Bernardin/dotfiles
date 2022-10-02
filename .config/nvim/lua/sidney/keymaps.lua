@@ -5,8 +5,8 @@ local opts = { noremap = true }
 keymap('n', '<leader>s', ':w<CR>', opts)
 
 -- Change distance of <C-d> and <C-u>.
-vim.cmd [[nnoremap <expr> <C-d> (winheight(0) / 3) . '<C-d>']]
-vim.cmd [[nnoremap <expr> <C-u> (winheight(0) / 3) . '<C-u>']]
+vim.cmd([[nnoremap <expr> <C-d> (winheight(0) / 3) . '<C-d>']])
+vim.cmd([[nnoremap <expr> <C-u> (winheight(0) / 3) . '<C-u>']])
 
 -- Buffer navigation.
 keymap('n', '<C-N>', ':bnext<CR>', opts)
