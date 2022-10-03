@@ -18,6 +18,8 @@ vim.api.nvim_create_autocmd('FileType', {
 -- Set winbar only when there are splits open.
 vim.api.nvim_create_autocmd('WinEnter', {
     callback = function()
+        if vim.bo.filetype == '' then return end
+
         if #vim.api.nvim_list_wins() > 1 then
             vim.opt.winbar = ' %t %(%m %)'
         else

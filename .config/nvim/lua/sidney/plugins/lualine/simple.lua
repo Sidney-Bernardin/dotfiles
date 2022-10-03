@@ -2,17 +2,31 @@ return function(colors)
     local config = {
         options = {
             theme = {
-                normal  = { a = { bg = colors.bg, fg = colors.fg } },
-                insert  = { a = { bg = colors.bg, fg = colors.mode_change } },
-                visual  = { a = { bg = colors.bg, fg = colors.mode_change } },
-                replace = { a = { bg = colors.bg, fg = colors.mode_change } },
-                command = { a = { bg = colors.bg, fg = colors.mode_change } },
+                normal  = {
+                    a = { bg = colors.bg, fg = colors.fg },
+                    b = { bg = colors.bg, fg = colors.fg },
+                },
+                insert  = {
+                    a = { bg = colors.bg, fg = colors.mode_change },
+                    z = { bg = colors.bg, fg = colors.fg },
+                },
+                visual  = {
+                    a = { bg = colors.bg, fg = colors.mode_change },
+                    z = { bg = colors.bg, fg = colors.fg },
+                },
+                replace = {
+                    a = { bg = colors.bg, fg = colors.mode_change },
+                    z = { bg = colors.bg, fg = colors.fg },
+                },
+                command = {
+                    a = { bg = colors.bg, fg = colors.mode_change },
+                    z = { bg = colors.bg, fg = colors.fg },
+                },
             },
             section_separators = '',
             component_separators = '',
         },
         sections = {
-            lualine_b = {},
             lualine_c = {},
             lualine_x = {},
             lualine_y = {},
@@ -22,6 +36,9 @@ return function(colors)
                     'mode',
                     padding = { left = 1 }
                 },
+            },
+
+            lualine_b = {
                 {
                     'branch',
                     icon = '',

@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
 
     -- File Navigation.
     use({ 'nvim-telescope/telescope.nvim', tag = '0.1.0' })
+    use('nvim-telescope/telescope-symbols.nvim')
     use('ThePrimeagen/harpoon')
 
     -- Git
@@ -36,9 +37,11 @@ return require('packer').startup(function(use)
     -- Flash Step!
     use('windwp/nvim-autopairs')
     use('jinh0/eyeliner.nvim')
+    use('tpope/vim-commentary')
 
     -- Cool Stuff
     use('simrat39/symbols-outline.nvim')
+    use('kyazdani42/nvim-web-devicons')
     use({
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }

@@ -1,3 +1,6 @@
+-- [[ ===== Functions ===== ]] --
+
+-- Change diagnostic sign icons.
 vim.fn.sign_define('DiagnosticSignError', { texthl = 'DiagnosticSignError', text = '', numhl = '' })
 vim.fn.sign_define('DiagnosticSignWarn', { texthl = 'DiagnosticSignWarn', text = '', numhl = '' })
 vim.fn.sign_define('DiagnosticSignHint', { texthl = 'DiagnosticSignHint', text = '', numhl = '' })
@@ -16,10 +19,8 @@ vim.g.mapleader = " "
 
 local opt = vim.opt
 
--- Basics
+-- Basic
 opt.background = 'dark'
-
--- Mouse
 opt.mouse = nil
 
 -- Cursor
@@ -34,21 +35,18 @@ opt.signcolumn = 'yes'
 
 -- Tabs
 opt.smartindent = true
+opt.expandtab = true
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
-opt.expandtab = true
 
--- Search
-opt.hlsearch = false
-opt.incsearch = true
+-- Bars
+opt.laststatus = 3
 
 -- Wrapping
 opt.wrap = false
 opt.cc = '80'
 
--- Pasting
-opt.pastetoggle = '<F3>'
-
--- Bars
-opt.laststatus = 3
+-- Search
+opt.hlsearch = false
+opt.incsearch = true

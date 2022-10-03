@@ -11,5 +11,5 @@ require('telescope').setup({
                 mirror = false,
             },
         },
-    }
+    },
 })
