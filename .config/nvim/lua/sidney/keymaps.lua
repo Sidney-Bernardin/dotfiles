@@ -9,8 +9,8 @@ vim.cmd([[nnoremap <expr> <C-d> (winheight(0) / 3) . '<C-d>']])
 vim.cmd([[nnoremap <expr> <C-u> (winheight(0) / 3) . '<C-u>']])
 
 -- Buffer navigation.
-keymap('n', '<C-N>', ':bnext<CR>', opts)
-keymap('n', '<C-P>', ':bprev<CR>', opts)
+keymap('n', '<C-n>', ':bnext<CR>', opts)
+keymap('n', '<C-p>', ':bprev<CR>', opts)
 
 -- Window navigation.
 keymap('n', '<leader>h', ':wincmd h<CR>', opts)

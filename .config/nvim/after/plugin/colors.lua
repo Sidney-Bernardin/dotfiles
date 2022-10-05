@@ -31,7 +31,7 @@ vim.cmd([[ highlight! TelescopePreviewNormal ctermbg=236 ]])
 vim.cmd([[ highlight! TelescopePreviewBorder ctermbg=236 ctermfg=236 ]])
 
 -- Harpoon
-vim.cmd([[ highlight! HarpoonWindow ctermbg=235 ctermfg=223 ]])
+vim.cmd([[ highlight! HarpoonWindow ctermbg=239 ctermfg=223 ]])
 vim.cmd([[ highlight! HarpoonBorder ctermbg=239 ctermfg=223 ]])
 
 -- Other

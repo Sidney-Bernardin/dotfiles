@@ -68,7 +68,7 @@ return function(colors)
                 },
                 {
                     'location',
-                    padding = { right = 1 }
+                    --padding = { right = 1 }
                 },
             },
         },

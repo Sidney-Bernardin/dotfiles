@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
     use('windwp/nvim-autopairs')
     use('jinh0/eyeliner.nvim')
     use('tpope/vim-commentary')
+    use('gbprod/yanky.nvim')
 
     -- Cool Stuff
     use('simrat39/symbols-outline.nvim')
