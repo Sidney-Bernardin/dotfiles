@@ -1,10 +1,13 @@
 -- [[ ===== Functions ===== ]] --
 
--- Change diagnostic sign icons.
+-- Change diagnostic signs.
 vim.fn.sign_define('DiagnosticSignError', { texthl = 'DiagnosticSignError', text = '', numhl = '' })
 vim.fn.sign_define('DiagnosticSignWarn', { texthl = 'DiagnosticSignWarn', text = '', numhl = '' })
 vim.fn.sign_define('DiagnosticSignHint', { texthl = 'DiagnosticSignHint', text = '', numhl = '' })
 vim.fn.sign_define('DiagnosticSignInfo', { texthl = 'DiagnosticSignInfo', text = '', numhl = '' })
+
+-- Change Dap signs.
+vim.fn.sign_define("DapBreakpoint", { text = '' })
 
 
 

@@ -1,7 +1,7 @@
 return require('packer').startup(function(use)
 
     use('wbthomason/packer.nvim')
-    use('nvim-lua/plenary.nvim')
+    use('nvim-lua/plenary.nvim') -- For a handful of other plugins to work.
 
     -- Color Scheme
     use('morhetz/gruvbox')
@@ -26,6 +26,13 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter')
     use('nvim-treesitter/nvim-treesitter-context')
 
+    -- Dap.
+    use('mfussenegger/nvim-dap')
+    use('leoluz/nvim-dap-go')
+    use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+    use('theHamsta/nvim-dap-virtual-text')
+    use('nvim-telescope/telescope-dap.nvim')
+
     -- File Navigation.
     use({ 'nvim-telescope/telescope.nvim', tag = '0.1.0' })
     use('nvim-telescope/telescope-symbols.nvim')
@@ -43,6 +50,7 @@ return require('packer').startup(function(use)
     -- Cool Stuff
     use('simrat39/symbols-outline.nvim')
     use('kyazdani42/nvim-web-devicons')
+    use('lukas-reineke/indent-blankline.nvim')
     use({
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
