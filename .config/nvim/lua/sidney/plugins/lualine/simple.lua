@@ -1,77 +1,67 @@
 return function(colors)
-    local config = {
-        options = {
-            theme = {
-                normal  = {
-                    a = { bg = colors.bg, fg = colors.fg },
-                    b = { bg = colors.bg, fg = colors.fg },
-                },
-                insert  = {
-                    a = { bg = colors.bg, fg = colors.mode_change },
-                    z = { bg = colors.bg, fg = colors.fg },
-                },
-                visual  = {
-                    a = { bg = colors.bg, fg = colors.mode_change },
-                    z = { bg = colors.bg, fg = colors.fg },
-                },
-                replace = {
-                    a = { bg = colors.bg, fg = colors.mode_change },
-                    z = { bg = colors.bg, fg = colors.fg },
-                },
-                command = {
-                    a = { bg = colors.bg, fg = colors.mode_change },
-                    z = { bg = colors.bg, fg = colors.fg },
-                },
-            },
-            section_separators = '',
-            component_separators = '',
+  local config = {
+    options = {
+      theme = {
+        normal = {
+          a = { bg = colors.bg, fg = colors.fg },
+          z = { bg = colors.bg, fg = colors.fg },
         },
-        sections = {
-            lualine_c = {},
-            lualine_x = {},
-            lualine_y = {},
+      },
+      section_separators = '',
+      component_separators = '',
+    },
+    sections = {
+      lualine_b = {},
+      lualine_c = {},
+      lualine_x = {},
+      lualine_y = {},
 
-            lualine_a = {
-                {
-                    'mode',
-                    padding = { left = 1 }
-                },
-            },
-
-            lualine_b = {
-                {
-                    'branch',
-                    icon = '',
-                    padding = { left = 5 }
-                },
-                {
-                    'diff',
-                    padding = { left = 1 }
-                },
-                {
-                    'diagnostics',
-                    padding = { left = 5 }
-                },
-                {
-                    "filename",
-                    path = 1,
-                    shorting_target = 100,
-                    icon = '',
-                    padding = { left = 5 }
-                }
-            },
-            lualine_z = {
-                {
-                    'progress',
-                    icon = '',
-                    padding = { left = 5 }
-                },
-                {
-                    'location',
-                    --padding = { right = 1 }
-                },
-            },
+      lualine_a = {
+        {
+          'branch',
+          icon = '',
+          padding = { left = 1, right = 4 }
         },
-    }
-    return config
+        {
+          'diff',
+          padding = { left = 1, right = 4 }
+        },
+        {
+          'diagnostics',
+          padding = { left = 1, right = 4 }
+        },
+        {
+          'filetype',
+          icon_only = true,
+          colored = false,
+          padding = { left = 1 },
+          color = function()
+            if vim.bo.modified then
+              return { fg = colors.modified_filename }
+            end
+          end
+        },
+        {
+          'filename',
+          path = 1,
+          color = function()
+            if vim.bo.modified then
+              return { fg = colors.modified_filename }
+            end
+          end
+        }
+      },
+      lualine_z = {
+        {
+          'progress',
+          icon = '',
+          padding = { left = 5 }
+        },
+        {
+          'location',
+        },
+      },
+    },
+  }
+  return config
 end

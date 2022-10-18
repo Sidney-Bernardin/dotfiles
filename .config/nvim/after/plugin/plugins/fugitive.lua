@@ -1,4 +1,4 @@
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 local opts = { noremap = true }
 
 keymap('n', '<leader>gj', ':diffget //3', opts)

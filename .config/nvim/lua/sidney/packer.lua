@@ -2,6 +2,7 @@ return require('packer').startup(function(use)
 
     use('wbthomason/packer.nvim')
     use('nvim-lua/plenary.nvim') -- For a handful of other plugins to work.
+    use('ray-x/guihua.lua') -- For some go.nvim features to work.
 
     -- Color Scheme
     use('morhetz/gruvbox')
@@ -26,6 +27,9 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter')
     use('nvim-treesitter/nvim-treesitter-context')
 
+    -- Language Spicific
+    use('ray-x/go.nvim')
+
     -- Dap.
     use('mfussenegger/nvim-dap')
     use('leoluz/nvim-dap-go')
@@ -33,7 +37,7 @@ return require('packer').startup(function(use)
     use('theHamsta/nvim-dap-virtual-text')
     use('nvim-telescope/telescope-dap.nvim')
 
-    -- File Navigation.
+    -- File Navigation
     use({ 'nvim-telescope/telescope.nvim', tag = '0.1.0' })
     use('nvim-telescope/telescope-symbols.nvim')
     use('ThePrimeagen/harpoon')

@@ -1,13 +1,15 @@
 -- [[ ===== Functions ===== ]] --
 
+local sign_def = vim.fn.sign_define
+
 -- Change diagnostic signs.
-vim.fn.sign_define('DiagnosticSignError', { texthl = 'DiagnosticSignError', text = '', numhl = '' })
-vim.fn.sign_define('DiagnosticSignWarn', { texthl = 'DiagnosticSignWarn', text = '', numhl = '' })
-vim.fn.sign_define('DiagnosticSignHint', { texthl = 'DiagnosticSignHint', text = '', numhl = '' })
-vim.fn.sign_define('DiagnosticSignInfo', { texthl = 'DiagnosticSignInfo', text = '', numhl = '' })
+sign_def('DiagnosticSignError', { texthl = 'DiagnosticSignError', text = '', numhl = '' })
+sign_def('DiagnosticSignWarn', { texthl = 'DiagnosticSignWarn', text = '', numhl = '' })
+sign_def('DiagnosticSignHint', { texthl = 'DiagnosticSignHint', text = '', numhl = '' })
+sign_def('DiagnosticSignInfo', { texthl = 'DiagnosticSignInfo', text = '', numhl = '' })
 
 -- Change Dap signs.
-vim.fn.sign_define("DapBreakpoint", { text = '' })
+sign_def("DapBreakpoint", { text = '' })
 
 
 

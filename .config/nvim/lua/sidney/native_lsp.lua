@@ -1,26 +1,3 @@
-local function do_lsp_configuration(on_attach)
-
-    -- Setup lspconfig and nvim-lsp-installer.
-    local lsp_installer = require("nvim-lsp-installer")
-    local lspconfig = require("lspconfig")
-    lsp_installer.setup({})
-
-    -- Setup an lspconfig configuration for each installed language server.
-    for _, server in ipairs(lsp_installer.get_installed_servers()) do
-        lspconfig[server.name].setup({
-            capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-            on_attach = on_attach,
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { 'vim' }
-                    }
-                }
-            }
-        })
-    end
-end
-
 local function on_attach()
 
     local keymap = vim.keymap.set
@@ -47,4 +24,22 @@ local function on_attach()
     })
 end
 
-do_lsp_configuration(on_attach)
+-- Setup lspconfig and nvim-lsp-installer.
+local lsp_installer = require("nvim-lsp-installer")
+local lspconfig = require("lspconfig")
+lsp_installer.setup({})
+
+-- Setup a configuration for each installed language server.
+for _, server in ipairs(lsp_installer.get_installed_servers()) do
+    lspconfig[server.name].setup({
+        capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+        on_attach = on_attach,
+        settings = {
+            Lua = {
+                diagnostics = {
+                    globals = { 'vim' }
+                }
+            }
+        }
+    })
+end

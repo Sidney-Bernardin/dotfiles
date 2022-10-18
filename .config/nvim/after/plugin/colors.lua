@@ -1,45 +1,52 @@
 vim.cmd('colorscheme gruvbox')
 
+local hl = vim.api.nvim_set_hl
+
 
 
 -- [[ ===== Custom Gruvbox highlights ===== ]] --
 
--- Highlight Yank color.
-vim.api.nvim_set_hl(0, 'HighlightYank', { ctermfg = 235, ctermbg = 214 })
+-- Highlight Yank
+hl(0, 'HighlightYank', { bold = true, ctermfg = 235, ctermbg = 214 })
 
 -- Cursor Line
-vim.cmd([[ highlight! CursorLine ctermbg=NONE ]])
-vim.cmd([[ highlight! CursorLineNr ctermbg=235 ctermfg=214 ]])
-
--- Floats
-vim.cmd([[ highlight! FloatBorder ctermbg=239 ctermfg=239 ]])
+-- vim.cmd([[ highlight! link Operator GruvboxFg1 ]]) -- To fix Gruvbox CursorLine bug.
+hl(0, 'CursorLine', { ctermbg = 235 })
+hl(0, 'CursorLineNr', { ctermbg = 235, ctermfg = 214 })
 
 -- Treesitter Context
-vim.cmd([[ highlight! TreesitterContext ctermbg=237 ]])
-vim.cmd([[ highlight! TreesitterContextLineNumber ctermbg=237 ctermfg=214 ]])
+hl(0, 'TreesitterContext', { ctermbg = 237 })
+hl(0, 'TreesitterContextLineNumber', { ctermbg = 237, ctermfg = 214 })
 
 -- Telescope
-vim.cmd([[ highlight! TelescopeMatching ctermfg=214 ]])
-vim.cmd([[ highlight! TelescopePromptTitle ctermbg=NONE ctermfg=223 ]])
-vim.cmd([[ highlight! TelescopePromptNormal ctermbg=238 ]])
-vim.cmd([[ highlight! TelescopePromptBorder ctermbg=238 ctermfg=238]])
-vim.cmd([[ highlight! TelescopePromptPrefix ctermfg=214 ]])
-vim.cmd([[ highlight! TelescopePromptCounter ctermfg=214 ]])
-vim.cmd([[ highlight! TelescopeResultsTitle ctermbg=NONE ctermfg=239 ]])
-vim.cmd([[ highlight! TelescopeResultsNormal ctermbg=239 ctermfg=223]])
-vim.cmd([[ highlight! TelescopeResultsBorder ctermbg=239 ctermfg=239]])
-vim.cmd([[ highlight! TelescopeSelection ctermbg=241 ctermfg=223 ]])
-vim.cmd([[ highlight! TelescopePreviewTitle ctermbg=NONE ctermfg=223 ]])
-vim.cmd([[ highlight! TelescopePreviewNormal ctermbg=236 ]])
-vim.cmd([[ highlight! TelescopePreviewBorder ctermbg=236 ctermfg=236 ]])
+hl(0, 'TelescopeMatching', { fg = 214 })
+hl(0, 'TelescopePromptTitle', { fg = 223 })
+hl(0, 'TelescopePromptNormal', { ctermbg = 238 })
+hl(0, 'TelescopePromptBorder', { ctermbg = 238, ctermfg = 238 })
+hl(0, 'TelescopePromptPrefix', { ctermfg = 214 })
+hl(0, 'TelescopePromptCounter', { ctermfg = 214 })
+hl(0, 'TelescopeResultsTitle', { ctermfg = 239 })
+hl(0, 'TelescopeResultsNormal', { ctermbg = 239, ctermfg = 223 })
+hl(0, 'TelescopeResultsBorder', { ctermbg = 239, ctermfg = 239 })
+hl(0, 'TelescopeSelection', { ctermbg = 241, ctermfg = 223 })
+hl(0, 'TelescopePreviewTitle', { ctermfg = 223 })
+hl(0, 'TelescopePreviewNormal', { ctermbg = 236 })
+hl(0, 'TelescopePreviewBorder', { ctermbg = 236, ctermfg = 236 })
+
+-- Eyeliner
+hl(0, 'EyelinerPrimary', { bold = true, ctermfg = 214 })
 
 -- Harpoon
-vim.cmd([[ highlight! HarpoonWindow ctermbg=239 ctermfg=223 ]])
-vim.cmd([[ highlight! HarpoonBorder ctermbg=239 ctermfg=223 ]])
+-- hl(0, 'HarpoonWindow', {})
+-- hl(0, 'HarpoonBorder', {})
 
--- Indent Blankline.
-vim.cmd([[ highlight! IndentBlanklineChar ctermfg=236 ]])
+-- Indent Blankline
+hl(0, 'IndentBlanklineChar', { ctermfg = 236 })
 
 -- Other
-vim.cmd([[ highlight! SignColumn ctermbg=235 ]])
-vim.cmd([[ highlight! QuickFixLine ctermbg=237 ]])
+hl(0, 'FloatBorder', { ctermbg = 239, ctermfg = 239 })
+hl(0, 'Visual', { bold = true, ctermbg = 109, ctermfg = 235 })
+hl(0, 'ColorColumn', { ctermbg = 236 })
+hl(0, 'WinBar', { ctermfg = 250 })
+hl(0, 'SignColumn', { ctermbg = 235 })
+hl(0, 'QuickFixLine', { ctermbg = 237 })

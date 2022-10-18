@@ -1,8 +1,8 @@
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 local opts = { noremap = true }
 
 -- Prompt.
-keymap('n', '<leader>t', ':Telescope ', opts)
+keymap('n', '<leader>tt', ':Telescope ', opts)
 
 -- Find files.
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
@@ -17,4 +17,4 @@ keymap('n', '<leader>fc', ':Telescope find_files cwd=~/.config/nvim<CR>', opts)
 keymap('n', '<leader>b', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>td', ':Telescope diagnostics<CR>', opts)
 keymap('n', '<A-s>', ':Telescope lsp_document_symbols<CR>', opts)
-keymap('n', '<leader>tg', ':Telescope live_grep<CR>', opts)
+keymap('n', '<leader>gg', ':Telescope live_grep<CR>', opts)

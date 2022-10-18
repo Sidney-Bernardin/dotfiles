@@ -1,1 +1,1 @@
-require("eyeliner").setup({})
+require("eyeliner").setup()

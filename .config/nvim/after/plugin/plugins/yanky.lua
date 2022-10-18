@@ -1,12 +1,15 @@
+local keymap = vim.keymap.set
+local opts = { noremap = true }
+
 -- Yanky history with Telescope.
-vim.keymap.set("n", "<A-h>", ":Telescope yank_history<CR>")
+keymap("n", "<A-h>", ":Telescope yank_history<CR>", opts)
 
 -- Override default paste for Yanky paste.
-vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
-vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
-vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)")
-vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")
+keymap({ "n", "x" }, "p", "<Plug>(YankyPutAfter)", opts)
+keymap({ "n", "x" }, "P", "<Plug>(YankyPutBefore)", opts)
+keymap({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)", opts)
+keymap({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)", opts)
 
--- Yanky history cycling.
-vim.keymap.set("n", "<A-n>", "<Plug>(YankyCycleForward)")
-vim.keymap.set("n", "<A-p>", "<Plug>(YankyCycleBackward)")
+-- Yanky history cycling, opts.
+keymap("n", "<A-n>", "<Plug>(YankyCycleForward)", opts)
+keymap("n", "<A-p>", "<Plug>(YankyCycleBackward)", opts)
