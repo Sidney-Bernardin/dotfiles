@@ -10,7 +10,7 @@ local hl = vim.api.nvim_set_hl
 hl(0, 'HighlightYank', { bold = true, ctermfg = 235, ctermbg = 214 })
 
 -- Cursor Line
--- vim.cmd([[ highlight! link Operator GruvboxFg1 ]]) -- To fix Gruvbox CursorLine bug.
+vim.cmd([[ highlight! link Operator GruvboxFg1 ]]) -- To fix Gruvbox CursorLine bug.
 hl(0, 'CursorLine', { ctermbg = 235 })
 hl(0, 'CursorLineNr', { ctermbg = 235, ctermfg = 214 })
 
@@ -19,8 +19,8 @@ hl(0, 'TreesitterContext', { ctermbg = 237 })
 hl(0, 'TreesitterContextLineNumber', { ctermbg = 237, ctermfg = 214 })
 
 -- Telescope
-hl(0, 'TelescopeMatching', { fg = 214 })
-hl(0, 'TelescopePromptTitle', { fg = 223 })
+hl(0, 'TelescopeMatching', { ctermfg = 214 })
+hl(0, 'TelescopePromptTitle', { ctermfg = 223 })
 hl(0, 'TelescopePromptNormal', { ctermbg = 238 })
 hl(0, 'TelescopePromptBorder', { ctermbg = 238, ctermfg = 238 })
 hl(0, 'TelescopePromptPrefix', { ctermfg = 214 })
@@ -34,7 +34,8 @@ hl(0, 'TelescopePreviewNormal', { ctermbg = 236 })
 hl(0, 'TelescopePreviewBorder', { ctermbg = 236, ctermfg = 236 })
 
 -- Eyeliner
-hl(0, 'EyelinerPrimary', { bold = true, ctermfg = 214 })
+hl(0, 'EyelinerPrimary', { ctermfg = 175 })
+hl(0, 'EyelinerSecondary', { ctermfg = 132 })
 
 -- Harpoon
 -- hl(0, 'HarpoonWindow', {})

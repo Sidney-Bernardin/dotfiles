@@ -1,7 +1,9 @@
 local autocmd = vim.api.nvim_create_autocmd
+local basic_auto_group = vim.api.nvim_create_augroup("MyBasicAutoGroup", { clear = true })
 
 -- Enable Highlight Yank.
 autocmd('TextYankPost', {
+    group = basic_auto_group,
     callback = function()
         vim.highlight.on_yank({ higroup = 'HighlightYank', timeout = 300 })
     end
@@ -10,6 +12,7 @@ autocmd('TextYankPost', {
 -- Shorter tabs.
 autocmd('FileType', {
     pattern = { 'html', 'vue', 'javascript' },
+    group = basic_auto_group,
     callback = function()
         vim.opt.tabstop = 2
         vim.opt.softtabstop = 2
@@ -19,6 +22,7 @@ autocmd('FileType', {
 
 -- Set winbar only when there are splits open.
 autocmd('WinEnter', {
+    group = basic_auto_group,
     callback = function()
         if vim.bo.filetype == '' then return end
 
