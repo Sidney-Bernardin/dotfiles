@@ -11,7 +11,7 @@ hl(0, 'HighlightYank', { bold = true, ctermfg = 235, ctermbg = 214 })
 
 -- Cursor Line
 vim.cmd([[ highlight! link Operator GruvboxFg1 ]]) -- To fix Gruvbox CursorLine bug.
-hl(0, 'CursorLine', { ctermbg = 235 })
+hl(0, 'CursorLine', {})
 hl(0, 'CursorLineNr', { ctermbg = 235, ctermfg = 214 })
 
 -- Treesitter Context

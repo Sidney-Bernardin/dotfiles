@@ -1,4 +1,4 @@
-local nullls = require("null-ls")
+local nullls = require('null-ls')
 
 nullls.setup({
   debug = false,

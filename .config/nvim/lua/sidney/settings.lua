@@ -1,6 +1,8 @@
--- [[ ===== Functions ===== ]] --
-
+local opt = vim.opt
 local sign_def = vim.fn.sign_define
+
+-- Leader key!
+vim.g.mapleader = " "
 
 -- Change diagnostic signs.
 sign_def('DiagnosticSignError', { texthl = 'DiagnosticSignError', text = '', numhl = '' })
@@ -10,19 +12,6 @@ sign_def('DiagnosticSignInfo', { texthl = 'DiagnosticSignInfo', text = '', nu
 
 -- Change Dap signs.
 sign_def("DapBreakpoint", { text = '' })
-
-
-
--- [[ ===== Global ===== ]] --
-
--- Leader key!
-vim.g.mapleader = " "
-
-
-
--- [[ ===== Options ===== ]] --
-
-local opt = vim.opt
 
 -- Basic
 opt.background = 'dark'
