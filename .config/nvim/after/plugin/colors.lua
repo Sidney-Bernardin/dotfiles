@@ -38,8 +38,8 @@ hl(0, 'EyelinerPrimary', { ctermfg = 175 })
 hl(0, 'EyelinerSecondary', { ctermfg = 132 })
 
 -- Harpoon
--- hl(0, 'HarpoonWindow', {})
--- hl(0, 'HarpoonBorder', {})
+hl(0, 'HarpoonWindow', { ctermbg = 236 })
+hl(0, 'HarpoonBorder', { ctermbg = 239 })
 
 -- Indent Blankline
 hl(0, 'IndentBlanklineChar', { ctermfg = 236 })
