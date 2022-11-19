@@ -30,22 +30,21 @@ hl(0, 'TelescopeResultsNormal', { ctermbg = 239, ctermfg = 223 })
 hl(0, 'TelescopeResultsBorder', { ctermbg = 239, ctermfg = 239 })
 hl(0, 'TelescopeSelection', { ctermbg = 241, ctermfg = 223 })
 hl(0, 'TelescopePreviewTitle', { ctermfg = 223 })
-hl(0, 'TelescopePreviewNormal', { ctermbg = 236 })
-hl(0, 'TelescopePreviewBorder', { ctermbg = 236, ctermfg = 236 })
+hl(0, 'TelescopePreviewNormal', { ctermbg = 237 })
+hl(0, 'TelescopePreviewBorder', { ctermbg = 237, ctermfg = 237 })
 
 -- Eyeliner
 hl(0, 'EyelinerPrimary', { ctermfg = 175 })
 hl(0, 'EyelinerSecondary', { ctermfg = 132 })
 
 -- Harpoon
-hl(0, 'HarpoonWindow', { ctermbg = 236 })
-hl(0, 'HarpoonBorder', { ctermbg = 239 })
+hl(0, 'HarpoonWindow', { ctermbg = 239 })
+hl(0, 'HarpoonBorder', { ctermbg = 239, ctermfg = 223 })
 
 -- Indent Blankline
 hl(0, 'IndentBlanklineChar', { ctermfg = 236 })
 
 -- Other
-hl(0, 'FloatBorder', { ctermbg = 239, ctermfg = 239 })
 hl(0, 'Visual', { bold = true, ctermbg = 109, ctermfg = 235 })
 hl(0, 'ColorColumn', { ctermbg = 236 })
 hl(0, 'WinBar', { ctermfg = 250 })

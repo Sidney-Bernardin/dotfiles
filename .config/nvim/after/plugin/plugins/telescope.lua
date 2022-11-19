@@ -16,5 +16,5 @@ keymap('n', '<leader>fc', ':Telescope find_files cwd=~/.config/nvim<CR>', opts)
 -- Telescope all of the things.
 keymap('n', '<leader>b', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>td', ':Telescope diagnostics<CR>', opts)
-keymap('n', '<A-s>', ':Telescope lsp_document_symbols<CR>', opts)
+keymap('n', '<leader>o', ':Telescope lsp_document_symbols<CR>', opts)
 keymap('n', '<leader>gg', ':Telescope live_grep<CR>', opts)

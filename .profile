@@ -20,7 +20,7 @@ fi
 alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Binds
-bind '"\C-p":"open-project-in-tmux\n"'
+bind '"\C-p":"my-operations\n"'
 
 # Golang ENV
 export GOROOT=/usr/local/go
