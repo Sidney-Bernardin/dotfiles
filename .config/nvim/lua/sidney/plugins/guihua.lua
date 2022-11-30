@@ -1,0 +1,1 @@
+require('guihua.maps').setup()
