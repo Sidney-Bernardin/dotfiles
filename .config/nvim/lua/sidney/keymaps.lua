@@ -18,10 +18,6 @@ keymap('n', '<leader>j', ':wincmd j<CR>', opts)
 keymap('n', '<leader>k', ':wincmd k<CR>', opts)
 keymap('n', '<leader>l', ':wincmd l<CR>', opts)
 
--- Window resizing.
-keymap('n', '<silent><leader>+', ':vertical resize =5', opts)
-keymap('n', '<silent><leader>-', ':vertical resize -5', opts)
-
 -- Greatest remap ever.
 keymap('v', '<leader>p', '"_dP', opts)
 
@@ -35,3 +31,7 @@ keymap('n', 'G', 'Gzz', opts)
 -- Undo break points.
 keymap('i', ',', ',<c-g>u', opts)
 keymap('i', '.', '.<c-g>u', opts)
+
+keymap('n', '<leader>m', function()
+    print()
+end, opts)

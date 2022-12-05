@@ -8,6 +8,7 @@ require('sidney.plugins.telescope')
 require('sidney.plugins.treesitter')
 require('sidney.plugins.yanky')
 require('sidney.plugins.luasnip')
+require('sidney.plugins.web_dev_icons')
 
 require('sidney.plugins.mason')
 require('sidney.plugins.nullls')
