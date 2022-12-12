@@ -1,16 +1,16 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true }
 
--- Prompt.
+-- Prompt
 keymap('n', '<leader>tt', ':Telescope ', opts)
 
--- Find files.
+-- Find Files
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 
 -- Find another directory prompt.
 keymap('n', '<leader>fo', ':Telescope find_files cwd=', opts)
 
--- Find nvim config.
+-- Find NeoVim Config.
 keymap('n', '<leader>fc', ':Telescope find_files cwd=~/.config/nvim<CR>', opts)
 
 -- Telescope all of the things.

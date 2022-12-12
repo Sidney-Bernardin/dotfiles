@@ -16,8 +16,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+
+
 # Aliases
-alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' # Quickly access dotfiles repository.
 
 # Binds
 bind '"\C-p":"my-operations\n"'
@@ -32,7 +34,6 @@ VERSION=v16.17.0
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
-# Starship shell prompt.
-export STARSHIP_CONFIG=~/.config/starship/simple.toml # Simple configuration.
-# export STARSHIP_CONFIG=~/.config/starship/gruvbox.toml # Gruvbox configuration.
+# Starship Shell Prompt
+export STARSHIP_CONFIG=~/.config/starship/minimal.toml
 eval "$(starship init bash)"

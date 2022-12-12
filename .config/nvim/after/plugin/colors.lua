@@ -1,12 +1,9 @@
-vim.cmd('colorscheme gruvbox')
-
 local hl = vim.api.nvim_set_hl
 
+-- Gruvbox!
+vim.cmd('colorscheme gruvbox')
 
-
--- [[ ===== Custom Gruvbox highlights ===== ]] --
-
--- Highlight Yank
+-- Highlighted Yank
 hl(0, 'HighlightYank', { bold = true, ctermfg = 235, ctermbg = 214 })
 
 -- Cursor Line

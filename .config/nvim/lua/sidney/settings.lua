@@ -1,7 +1,7 @@
 local opt = vim.opt
 local sign_def = vim.fn.sign_define
 
--- Leader key!
+-- Leader Key
 vim.g.mapleader = " "
 
 -- Change diagnostic signs.
@@ -10,12 +10,8 @@ sign_def('DiagnosticSignWarn', { texthl = 'DiagnosticSignWarn', text = '', nu
 sign_def('DiagnosticSignHint', { texthl = 'DiagnosticSignHint', text = '', numhl = '' })
 sign_def('DiagnosticSignInfo', { texthl = 'DiagnosticSignInfo', text = '', numhl = '' })
 
--- Change Dap signs.
+-- Change nvim-dap signs.
 sign_def("DapBreakpoint", { text = '' })
-
--- Basic
-opt.background = 'dark'
-opt.mouse = nil
 
 -- Cursor
 opt.scrolloff = 8
@@ -41,6 +37,10 @@ opt.laststatus = 3
 opt.wrap = false
 opt.cc = '80'
 
--- Search
+-- Searching
 opt.hlsearch = false
 opt.incsearch = true
+
+-- Other
+opt.background = 'dark'
+opt.mouse = nil

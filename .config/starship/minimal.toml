@@ -2,8 +2,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = "[$username@$hostname[  ](fg:#ffffff)](bold fg:#87FFC5)[$git_branch](fg:#EE5FFA)$directory[\\$](bold) "
-
-# Don't insert blank line between prompts.
 add_newline = false
 
 [git_branch]
