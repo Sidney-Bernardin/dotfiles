@@ -1,7 +1,7 @@
 local colors = {
-    bg = 237, -- Gruvbox bg1.
-    fg = 250, -- Gruvbox fg2.
-    modified_file = 223, -- Gruvbox fg1.
+    bg = 237,
+    fg = 250,
+    modified_file = 223,
 }
 
 return {
