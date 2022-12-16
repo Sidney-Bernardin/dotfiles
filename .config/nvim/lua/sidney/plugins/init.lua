@@ -1,7 +1,6 @@
 require('sidney.plugins.autopairs')
 require('sidney.plugins.cmp')
 require('sidney.plugins.lualine')
-require('sidney.plugins.symbols_outline')
 require('sidney.plugins.harpoon')
 require('sidney.plugins.go')
 require('sidney.plugins.telescope')

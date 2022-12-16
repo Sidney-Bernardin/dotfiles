@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
     use('L3MON4D3/LuaSnip')
     use('rafamadriz/friendly-snippets')
 
-    -- LSP Configuration
+    -- Native LSP
     use('williamboman/mason.nvim')
     use('neovim/nvim-lspconfig')
     use({ 'jose-elias-alvarez/null-ls.nvim', branch = 'main' })

@@ -35,5 +35,5 @@ DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
 # Starship Shell Prompt
-export STARSHIP_CONFIG=~/.config/starship/minimal_rainbow.toml
+export STARSHIP_CONFIG=~/.config/starship/basic.toml
 eval "$(starship init bash)"

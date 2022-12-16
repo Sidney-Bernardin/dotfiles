@@ -1,5 +1,4 @@
 local lspconfig = require("lspconfig")
-local auto_format_group = vim.api.nvim_create_augroup("AutoFormat", { clear = true })
 
 -- Sets native LSP keymaps and auto commands.
 local function on_attach(_, bufnr)
@@ -24,7 +23,7 @@ local function on_attach(_, bufnr)
 
     -- Format on save.
     vim.api.nvim_create_autocmd('BufWritePre', {
-        group = auto_format_group,
+        group = vim.api.nvim_create_augroup("AutoFormat", { clear = true }),
         buffer = bufnr,
         callback = function() vim.lsp.buf.format({ bufnr = bufnr }) end,
     })

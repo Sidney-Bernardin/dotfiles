@@ -1,15 +1,15 @@
 local hl = vim.api.nvim_set_hl
 
-local function gruvbox_minimal()
+local function gruvbox()
 
     vim.cmd('colorscheme gruvbox')
 
     -- Highlighted Yank
-    hl(0, 'HighlightYank', { bold = true, ctermfg = 235, ctermbg = 214 })
+    hl(0, 'HighlightYank', { ctermfg = 235, ctermbg = 214, bold = true })
 
     -- Cursor Line
     vim.cmd([[ highlight! link Operator GruvboxFg1 ]]) -- To fix Gruvbox CursorLine bug.
-    hl(0, 'CursorLine', {})
+    hl(0, 'CursorLine', { ctermbg = 236 })
     hl(0, 'CursorLineNr', { ctermbg = 235, ctermfg = 214 })
 
     -- Treesitter Context
@@ -43,7 +43,7 @@ local function gruvbox_minimal()
     hl(0, 'IndentBlanklineChar', { ctermfg = 236 })
 
     -- Other
-    hl(0, 'Visual', { bold = true, ctermbg = 109, ctermfg = 235 })
+    hl(0, 'Visual', { ctermbg = 109, ctermfg = 235, bold = true })
     hl(0, 'ColorColumn', { ctermbg = 236 })
     hl(0, 'WinBar', { ctermfg = 250 })
     hl(0, 'SignColumn', { ctermbg = 235 })
@@ -51,4 +51,4 @@ local function gruvbox_minimal()
     hl(0, 'FloatBorder', { ctermbg = 239, ctermfg = 239 })
 end
 
-gruvbox_minimal()
+gruvbox()
