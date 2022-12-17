@@ -10,9 +10,6 @@ sign_def('DiagnosticSignWarn', { texthl = 'DiagnosticSignWarn', text = '', nu
 sign_def('DiagnosticSignHint', { texthl = 'DiagnosticSignHint', text = '', numhl = '' })
 sign_def('DiagnosticSignInfo', { texthl = 'DiagnosticSignInfo', text = '', numhl = '' })
 
--- Change nvim-dap signs.
-sign_def("DapBreakpoint", { text = '' })
-
 -- Cursor
 opt.scrolloff = 8
 opt.guicursor = ''

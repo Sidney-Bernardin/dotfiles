@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
     use({ 'jose-elias-alvarez/null-ls.nvim', branch = 'main' })
 
     -- Treesitter
-    use('nvim-treesitter/nvim-treesitter')
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/nvim-treesitter-context')
 
     -- Language Spicific
@@ -60,4 +60,5 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     })
+    use('kosayoda/nvim-lightbulb')
 end)

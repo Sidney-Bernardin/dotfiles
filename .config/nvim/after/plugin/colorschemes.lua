@@ -2,7 +2,7 @@ local hl = vim.api.nvim_set_hl
 
 local function gruvbox()
 
-    vim.cmd('colorscheme gruvbox')
+    vim.cmd.colorscheme('gruvbox')
 
     -- Highlighted Yank
     hl(0, 'HighlightYank', { ctermfg = 235, ctermbg = 214, bold = true })

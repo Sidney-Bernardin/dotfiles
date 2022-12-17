@@ -9,17 +9,6 @@ autocmd('TextYankPost', {
     end
 })
 
--- Sets shorter tabs for specific file types.
-autocmd('FileType', {
-    pattern = { 'html', 'vue', 'javascript' },
-    group = general_auto_group,
-    callback = function()
-        vim.opt.tabstop = 2
-        vim.opt.softtabstop = 2
-        vim.opt.shiftwidth = 2
-    end
-})
-
 -- Sets winbar only when multiple windows are open.
 autocmd('WinEnter', {
     group = general_auto_group,

@@ -29,7 +29,7 @@ local function on_attach(_, bufnr)
     })
 end
 
--- Add to the default language server configuration.
+-- Tell lspconfig to use the following table when setting up any language server.
 lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
     capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     on_attach = on_attach

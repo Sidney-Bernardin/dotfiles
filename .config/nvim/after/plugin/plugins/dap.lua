@@ -1,6 +1,9 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true }
 
+-- Change nvim-dap signs.
+vim.fn.sign_define('DapBreakpoint', { text = '' })
+
 keymap('n', '<leader>dr', ':lua require("dap").repl.open()<CR>', opts)
 keymap('n', '<leader>dt', ':lua require("dap-go").debug_test()<CR>', opts)
 
