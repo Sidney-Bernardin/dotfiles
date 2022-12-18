@@ -31,3 +31,14 @@ keymap('n', 'G', 'Gzz', opts)
 -- Undo Breakpoints
 keymap('i', ',', ',<c-g>u', opts)
 keymap('i', '.', '.<c-g>u', opts)
+
+-- Mouse Toggle
+keymap('n', 'M', function()
+    if vim.opt.mouse._value == '' then
+        vim.opt.mouse = 'a'
+        print('Mouse is OFF!')
+    else
+        vim.opt.mouse = ''
+        print('Mouse is ON!')
+    end
+end, opts)

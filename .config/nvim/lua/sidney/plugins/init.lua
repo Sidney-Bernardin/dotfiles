@@ -30,3 +30,4 @@ require('sidney.plugins.yanky')
 -- Other cool stuff.
 require('sidney.plugins.web_dev_icons')
 require('sidney.plugins.lualine')
+require('sidney.plugins.lightbulb')

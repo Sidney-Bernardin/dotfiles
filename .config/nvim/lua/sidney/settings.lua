@@ -40,4 +40,4 @@ opt.incsearch = true
 
 -- Other
 opt.background = 'dark'
-opt.mouse = nil
+opt.mouse = 'a'
