@@ -1,4 +1,4 @@
--- Change the nvim-lightbulb sign.
+-- Change the sign.
 vim.fn.sign_define('LightBulbSign', { text = '', texthl = 'LineNr' })
 
 -- Update the lightbulb when the cursor moves.

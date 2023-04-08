@@ -1,7 +1,7 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true }
 
--- Change nvim-dap signs.
+-- Change the breakpoint sign.
 vim.fn.sign_define('DapBreakpoint', { text = '' })
 
 keymap('n', '<leader>dr', ':lua require("dap").repl.open()<CR>', opts)

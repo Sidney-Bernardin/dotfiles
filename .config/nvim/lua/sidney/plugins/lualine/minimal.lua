@@ -59,11 +59,11 @@ return {
         lualine_z = {
             {
                 'progress',
-                icon = '',
-                padding = { left = 5 }
+                padding = { left = 4, right = 1 }
             },
             {
                 'location',
+                padding = { right = 1 }
             },
         },
     },
