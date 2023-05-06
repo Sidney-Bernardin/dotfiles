@@ -1,7 +1,7 @@
 # Get editor completions based on the config schema.
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = "[$username@$hostname[  ](fg:#ffffff)](bold fg:#87FFC5)[$git_branch](fg:#EE5FFA)$directory[\\$](bold) "
+format = "[$username@$hostname[  ](fg:#ffffff)](bold fg:#87FFC5)[$git_branch](fg:#EE5FFA)$python$directory[\\$](bold) "
 add_newline = false
 
 [git_branch]
@@ -22,3 +22,8 @@ show_always = true
 [hostname]
 ssh_only = false
 format = "$ssh_symbol$hostname"
+
+[python]
+symbol = "󱔎"
+format = '[$symbol $virtualenv]($style) [ ](fg:#ffffff)'
+detect_extensions = []

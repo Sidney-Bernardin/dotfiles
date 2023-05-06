@@ -37,6 +37,7 @@ lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_c
 -- Setup language servers.
 lspconfig.gopls.setup({})
 lspconfig.tsserver.setup({})
+lspconfig.cssls.setup({})
 lspconfig.vuels.setup({})
 lspconfig.emmet_ls.setup({})
 lspconfig.gdscript.setup({})
@@ -49,4 +50,7 @@ lspconfig.lua_ls.setup({
             }
         }
     }
+})
+lspconfig.rust_analyzer.setup({
+    cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' }
 })

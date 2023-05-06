@@ -34,6 +34,9 @@ VERSION=v16.17.0
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
+# Rust ENV
+. "$HOME/.cargo/env"
+
 # Starship Shell Prompt
 export STARSHIP_CONFIG=~/.config/starship/basic.toml
 eval "$(starship init bash)"

@@ -8,10 +8,10 @@ keymap('n', '<leader>dr', ':lua require("dap").repl.open()<CR>', opts)
 keymap('n', '<leader>dt', ':lua require("dap-go").debug_test()<CR>', opts)
 
 -- Stepping
-keymap('n', '<F5>', ':lua require("dap").continue()<CR>', opts)
-keymap('n', '<F1>', ':lua require("dap").step_over()<CR>', opts)
-keymap('n', '<F2>', ':lua require("dap").step_into()<CR>', opts)
-keymap('n', '<F3>', ':lua require("dap").step_out()<CR>', opts)
+keymap('n', '<F9>', ':lua require("dap").continue()<CR>', opts)
+keymap('n', '<F10>', ':lua require("dap").step_over()<CR>', opts)
+keymap('n', '<F11>', ':lua require("dap").step_into()<CR>', opts)
+keymap('n', '<F12>', ':lua require("dap").step_out()<CR>', opts)
 
 -- Breakpoints
 keymap('n', '<A-b>', ':lua require("dap").toggle_breakpoint()<CR>', opts)
