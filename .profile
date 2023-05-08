@@ -22,7 +22,7 @@ fi
 alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' # Quickly access dotfiles repository.
 
 # Binds
-bind '"\C-p":"my-operations\n"'
+bind '"\C-p":"sessionizer\n"'
 
 # Golang ENV
 export GOROOT=/usr/local/go

@@ -27,3 +27,4 @@ format = "$ssh_symbol$hostname"
 symbol = ""
 format = '$symbol $virtualenv [ ](fg:#ffffff)'
 detect_extensions = []
+detect_files = []
