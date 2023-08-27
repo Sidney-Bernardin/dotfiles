@@ -1,38 +1,55 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true }
 
--- Quick Save
+-- Quick save
 keymap('n', '<leader>s', ':w<CR>', opts)
 
--- Change distance of <C-d> and <C-u>.
-vim.cmd([[nnoremap <expr> <C-d> (winheight(0) / 3) . '<C-d>']])
-vim.cmd([[nnoremap <expr> <C-u> (winheight(0) / 3) . '<C-u>']])
-
--- Buffer Navigation
+-- Buffer navigation
 keymap('n', '<C-n>', ':bnext<CR>', opts)
 keymap('n', '<C-p>', ':bprev<CR>', opts)
 
--- Window Navigation
+-- Window navigation
 keymap('n', '<leader>h', ':wincmd h<CR>', opts)
 keymap('n', '<leader>j', ':wincmd j<CR>', opts)
 keymap('n', '<leader>k', ':wincmd k<CR>', opts)
 keymap('n', '<leader>l', ':wincmd l<CR>', opts)
 
--- Greatest remap ever!
-keymap('v', '<leader>p', '"_dP', opts)
+-- Quickfix-List navigation
+keymap('n', '<C-j>', ':cnext<CR>zz', opts)
+keymap('n', '<C-k>', ':cprev<CR>zz', opts)
 
--- Quickfix List Navigation
-keymap('n', '<C-j>', ':cnext<CR>', opts)
-keymap('n', '<C-k>', ':cprev<CR>', opts)
-
--- Centers screen when jumping to bottom of file.
+-- Center screen for stuff
 keymap('n', 'G', 'Gzz', opts)
+keymap('n', '<C-d>', '<C-d>zz')
+keymap('n', '<C-u>', '<C-u>zz')
+keymap('n', 'n', 'nzzzV')
+keymap('n', 'N', 'NzzzV')
 
--- Undo Breakpoints
+-- Greatest remaps ever!
+keymap('n', '<leader>p', '"_dP', opts)
+keymap('n', '<leader>y', '\"+y', opts)
+keymap('v', '<leader>y', '\"+y', opts)
+keymap('v', '<leader>Y', '\"+Y', opts)
+
+-- Undo breakpoints
 keymap('i', ',', ',<c-g>u', opts)
 keymap('i', '.', '.<c-g>u', opts)
 
--- Mouse Toggle
+-- Merge lines with a stationary cursor.
+keymap('n', 'J', 'mzJ`z', opts)
+
+-- Move visual selection
+keymap('v', 'J', ":m '>+1<CR>gv=gv")
+keymap('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- Change distance of <C-d> and <C-u>
+vim.cmd([[nnoremap <expr> <C-d> (winheight(0) / 3) . '<C-d>']])
+vim.cmd([[nnoremap <expr> <C-u> (winheight(0) / 3) . '<C-u>']])
+
+-- Runs sessionizer script in a new tmux window.
+keymap('n', '<A-p>', '<cmd>silent !tmux neww sessionizer<CR>')
+
+-- Mouse toggle
 keymap('n', 'M', function()
     if vim.opt.mouse._value == '' then
         vim.opt.mouse = 'a'

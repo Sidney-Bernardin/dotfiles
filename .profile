@@ -19,7 +19,7 @@ fi
 
 
 # Aliases
-alias dotrepo='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' # Quickly access dotfiles repository.
+alias df='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' # Quickly access dotfiles repository.
 
 # Binds
 bind '"\C-p":"sessionizer\n"'
@@ -35,7 +35,7 @@ DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
 # Rust ENV
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # Starship Shell Prompt
 export STARSHIP_CONFIG=~/.config/starship/basic.toml

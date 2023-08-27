@@ -3,5 +3,5 @@ vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 vim.g.netrw_buffsettings = 'noma nomod nu nobl nowrap ro'
 
--- Quick Open
+-- Quick open
 vim.keymap.set('n', '<leader>pv', ':Ex<CR>', { noremap = true })

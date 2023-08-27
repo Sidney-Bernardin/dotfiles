@@ -1,12 +1,11 @@
 return require('packer').startup(function(use)
-
     use('wbthomason/packer.nvim')
 
     -- Utilities
     use('nvim-lua/plenary.nvim')
     use('ray-x/guihua.lua')
 
-    -- Color Schemes
+    -- Color schemes
     use('morhetz/gruvbox')
 
     -- nvim-cmp
@@ -29,7 +28,7 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/nvim-treesitter-context')
 
-    -- Language Spicific
+    -- Language spicific
     use('ray-x/go.nvim')
 
     -- nvim-dap
@@ -39,7 +38,7 @@ return require('packer').startup(function(use)
     use('theHamsta/nvim-dap-virtual-text')
     use('nvim-telescope/telescope-dap.nvim')
 
-    -- File Navigation
+    -- File navigation
     use({ 'nvim-telescope/telescope.nvim', tag = '0.1.0' })
     use('nvim-telescope/telescope-symbols.nvim')
     use('ThePrimeagen/harpoon')
@@ -53,7 +52,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-commentary')
     use('gbprod/yanky.nvim')
 
-    -- Other cool stuff.
+    -- Other cool stuff
     use('kyazdani42/nvim-web-devicons')
     use('lukas-reineke/indent-blankline.nvim')
     use({

@@ -10,6 +10,6 @@ keymap({ "n", "x" }, "P", "<Plug>(YankyPutBefore)", opts)
 keymap({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)", opts)
 keymap({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)", opts)
 
--- History Navigation
+-- History navigation
 keymap("n", "<A-n>", "<Plug>(YankyCycleForward)", opts)
 keymap("n", "<A-p>", "<Plug>(YankyCycleBackward)", opts)

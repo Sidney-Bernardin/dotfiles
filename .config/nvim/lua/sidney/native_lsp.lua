@@ -5,13 +5,13 @@ local function on_attach(_, bufnr)
     local keymap = vim.keymap.set
     local opts = { noremap = true }
 
-    -- Diagnostics keymaps.
+    -- Diagnostics keymaps
     keymap('n', '[d', vim.diagnostic.goto_prev, opts)
     keymap('n', ']d', vim.diagnostic.goto_next, opts)
     keymap('n', '<leader>d', vim.diagnostic.open_float, opts)
     keymap('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
-    -- LSP keymaps.
+    -- LSP keymaps
     keymap('n', '<leader>a', vim.lsp.buf.code_action, opts)
     keymap('n', '<leader>i', vim.lsp.buf.hover, opts)
     keymap('n', 'gd', vim.lsp.buf.definition, opts)
@@ -20,7 +20,7 @@ local function on_attach(_, bufnr)
     keymap('n', '<leader>rn', vim.lsp.buf.rename, opts)
     keymap('n', '<leader>F', vim.lsp.buf.format, opts)
 
-    -- Format on save.
+    -- Format on save
     vim.api.nvim_create_autocmd('BufWritePre', {
         group = vim.api.nvim_create_augroup("AutoFormat", { clear = true }),
         buffer = bufnr,
@@ -34,7 +34,7 @@ lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_c
     on_attach = on_attach
 })
 
--- Setup language servers.
+-- Setup language servers
 lspconfig.gopls.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.cssls.setup({})
