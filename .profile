@@ -38,5 +38,5 @@ export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 # . "$HOME/.cargo/env"
 
 # Starship Shell Prompt
-export STARSHIP_CONFIG=~/.config/starship/basic.toml
+export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init bash)"

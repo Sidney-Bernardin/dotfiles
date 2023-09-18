@@ -1,6 +1,18 @@
-local lspconfig = require("lspconfig")
+local ok, lspconfig = pcall(require, "lspconfig")
+if not ok then return end
 
--- Sets native LSP keymaps and auto commands.
+
+
+-- Change diagnostic signs
+local sign_def = vim.fn.sign_define
+sign_def('DiagnosticSignError', { texthl = 'DiagnosticSignError', text = '', numhl = '' })
+sign_def('DiagnosticSignWarn', { texthl = 'DiagnosticSignWarn', text = '', numhl = '' })
+sign_def('DiagnosticSignHint', { texthl = 'DiagnosticSignHint', text = '', numhl = '' })
+sign_def('DiagnosticSignInfo', { texthl = 'DiagnosticSignInfo', text = '', numhl = '' })
+
+
+
+-- Sets LSP keymaps and auto commands.
 local function on_attach(_, bufnr)
     local keymap = vim.keymap.set
     local opts = { noremap = true }
@@ -12,13 +24,13 @@ local function on_attach(_, bufnr)
     keymap('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
     -- LSP keymaps
-    keymap('n', '<leader>a', vim.lsp.buf.code_action, opts)
+    keymap('n', '<leader>ca', vim.lsp.buf.code_action, opts)
     keymap('n', '<leader>i', vim.lsp.buf.hover, opts)
-    keymap('n', 'gd', vim.lsp.buf.definition, opts)
-    keymap('n', 'gt', vim.lsp.buf.type_definition, opts)
+    keymap('n', '<leader>gd', vim.lsp.buf.definition, opts)
+    keymap('n', '<leader>gt', vim.lsp.buf.type_definition, opts)
     keymap('n', '<leader>gi', vim.lsp.buf.implementation, opts)
     keymap('n', '<leader>rn', vim.lsp.buf.rename, opts)
-    keymap('n', '<leader>F', vim.lsp.buf.format, opts)
+    keymap('n', '<leader>f', vim.lsp.buf.format, opts)
 
     -- Format on save
     vim.api.nvim_create_autocmd('BufWritePre', {
@@ -28,20 +40,24 @@ local function on_attach(_, bufnr)
     })
 end
 
--- The following table is used when setting up any language server.
+
+
+-- The following table is used when setting up language servers.
 lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
     capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     on_attach = on_attach
 })
 
+
+
 -- Setup language servers
-lspconfig.gopls.setup({})
-lspconfig.tsserver.setup({})
-lspconfig.cssls.setup({})
-lspconfig.vuels.setup({})
 lspconfig.emmet_ls.setup({})
-lspconfig.gdscript.setup({})
+lspconfig.cssls.setup({})
+lspconfig.tsserver.setup({})
+lspconfig.vuels.setup({})
+lspconfig.gopls.setup({})
 lspconfig.pyright.setup({})
+lspconfig.gdscript.setup({})
 lspconfig.lua_ls.setup({
     settings = {
         Lua = {

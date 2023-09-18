@@ -1,10 +1,21 @@
+local ok, yanky = pcall(require, "yanky")
+if not ok then return end
+
+
+
+yanky.setup({
+    highlight = {
+        on_put = false,
+        on_yank = false,
+    },
+})
+
+
+
 local keymap = vim.keymap.set
 local opts = { noremap = true }
 
--- Shows history with Telescope.
-keymap("n", "<A-h>", ":Telescope yank_history<CR>", opts)
-
--- Override default paste for Yanky paste.
+-- Use Yanky when using paste.
 keymap({ "n", "x" }, "p", "<Plug>(YankyPutAfter)", opts)
 keymap({ "n", "x" }, "P", "<Plug>(YankyPutBefore)", opts)
 keymap({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)", opts)
