@@ -7,13 +7,6 @@ telescope.setup({
     defaults = {
         file_ignore_patterns = { "node_modules" },
 
-        mappings = {
-            i = {
-                ["<C-j>"] = "move_selection_next",
-                ["<C-k>"] = "move_selection_previous",
-            },
-        },
-
         selection_caret = " ",
         entry_prefix = " ",
         prompt_prefix = " ",
