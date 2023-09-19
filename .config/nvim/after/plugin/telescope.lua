@@ -29,7 +29,7 @@ telescope.setup({
             hijack_netrw = true,
             mappings = {
                 ["i"] = {
-                    ["<C-b>"] = fb_actions.backspace,
+                    ["<C-[>"] = fb_actions.backspace,
                 },
             },
         },
@@ -53,7 +53,7 @@ keymap("n", "<leader>tt", ":Telescope ", opts)
 -- Files
 keymap("n", "<leader>a", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>,", ":Telescope find_files cwd=~/.config/nvim<CR>", opts)
-keymap("n", "<C-b>", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
+keymap("n", "-", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 
 -- Telescope all of the things.
 keymap("n", "<leader>b", ":Telescope buffers<CR>", opts)
