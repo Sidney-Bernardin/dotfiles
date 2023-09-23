@@ -1,7 +1,7 @@
 local autocmd = vim.api.nvim_create_autocmd
 local general_auto_group = vim.api.nvim_create_augroup("General", { clear = true })
 
--- Highlights current line on yank.
+-- Highlights yanked lines.
 autocmd('TextYankPost', {
     group = general_auto_group,
     callback = function()

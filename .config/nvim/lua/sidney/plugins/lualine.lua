@@ -1,18 +1,10 @@
-local ok, lualine = pcall(require, "lualine")
-if not ok then return end
-
-
-
--- Gruvbox themed colors.
 local colors = {
     bg = 237,
     fg = 250,
     modified_file = 223,
 }
 
-
-
-lualine.setup({
+local lualine_config = {
     options = {
         theme = {
             normal = {
@@ -75,4 +67,11 @@ lualine.setup({
             },
         },
     },
-})
+}
+
+return {
+    "nvim-lualine/lualine.nvim",
+    config = function ()
+        require("lualine").setup(lualine_config)
+    end
+}
