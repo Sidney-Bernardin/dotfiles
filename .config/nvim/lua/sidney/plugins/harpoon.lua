@@ -11,10 +11,10 @@ return {
         local opts = { noremap = true }
 
         -- Mark file
-        keymap("n", "<leader>mm", ":lua require('harpoon.mark').add_file()<CR>", opts)
+        keymap("n", "<A-m>", ":lua require('harpoon.mark').add_file()<CR>", opts)
 
         -- Open menu
-        keymap("n", "<leader>u", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+        keymap("n", "<A-u>", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
 
         -- File navigation
         keymap("n", "<A-j>", ":lua require('harpoon.ui').nav_file(1)<CR>", opts)

@@ -35,9 +35,6 @@ return {
         hl(0, 'HarpoonWindow', { ctermbg = 239 })
         hl(0, 'HarpoonBorder', { ctermbg = 239, ctermfg = 223 })
 
-        -- Indent Blankline
-        hl(0, 'IndentBlanklineChar', { ctermfg = 236 })
-
         -- Other
         hl(0, 'Visual', { ctermbg = 109, ctermfg = 235, bold = true })
         hl(0, 'ColorColumn', { ctermbg = 236 })
