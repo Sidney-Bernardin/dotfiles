@@ -50,11 +50,11 @@ keymap("n", "<A-p>", "<cmd>silent !tmux neww sessionizer<CR>")
 
 -- Mouse toggle
 keymap("n", "M", function()
-  if vim.opt.mouse._value == "" then
-    vim.opt.mouse = "a"
-    print("󰍽 Mouse is ON 󰍽")
-  else
-    vim.opt.mouse = ""
-    print("󰍾 Mouse is OFF 󰍾")
-  end
+    if vim.opt.mouse._value == "" then
+        vim.opt.mouse = "a"
+        print("󰍽 Mouse is ON 󰍽")
+    else
+        vim.opt.mouse = ""
+        print("󰍾 Mouse is OFF 󰍾")
+    end
 end, opts)
