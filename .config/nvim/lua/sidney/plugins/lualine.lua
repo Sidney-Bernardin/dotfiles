@@ -71,7 +71,8 @@ local lualine_config = {
 
 return {
     "nvim-lualine/lualine.nvim",
-    config = function ()
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
         require("lualine").setup(lualine_config)
     end
 }
