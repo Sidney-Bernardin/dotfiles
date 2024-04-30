@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+project_path=$(find ~/projects -mindepth 1 -maxdepth 2 -type d | fzf)
+project_name=$(basename $project_path | tr . _)
+
+# Get the project's tmux session name.
+session_name=$(tmux list-sessions -F '#S' | grep $project_name)
+
+if [[ -z $TMUX ]]; then # If not in tmux.
+    if [[ -z $session_name ]]; then # If session doesn't exist.
+        tmux new-session -s $project_name -c $project_path
+    else
+        tmux attach -t $project_name
+    fi
+else
+    if [[ -z $session_name ]]; then # If session doesn't exist.
+        tmux new-session -ds $project_name -c $project_path
+    fi
+
+    tmux switch-client -t $project_name
+fi
