@@ -18,7 +18,7 @@ fi
 
 
 
-bind '"\C-p":"sessionizer\n"'
+bind '"\C-p":"~/scripts/sessionizer\n"'
 
 # Node Version Manager
 export NVM_DIR="$HOME/.config/nvm"
