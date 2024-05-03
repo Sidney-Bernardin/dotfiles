@@ -26,7 +26,11 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Golang
-PATH=$PATH:/usr/local/go/bin
+GOPATH=$HOME/go
+PATH=$GOPATH/bin:$PATH:/usr/local/go/bin
+
+# Rust
+. "$HOME/.cargo/env"
 
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
