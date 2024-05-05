@@ -2,7 +2,6 @@ local function on_attach(_, bufnr)
     local keymap = vim.keymap.set
     local opts = { noremap = true }
 
-    -- LSP
     keymap('n', '<leader>ca', vim.lsp.buf.code_action, opts)
     keymap('n', '<leader>i', vim.lsp.buf.hover, opts)
     keymap('n', '<leader>gd', vim.lsp.buf.definition, opts)
@@ -11,7 +10,6 @@ local function on_attach(_, bufnr)
     keymap('n', '<leader>rn', vim.lsp.buf.rename, opts)
     keymap('n', '<leader>f', vim.lsp.buf.format, opts)
 
-    -- Diagnostics
     keymap('n', '[d', vim.diagnostic.goto_prev, opts)
     keymap('n', ']d', vim.diagnostic.goto_next, opts)
     keymap('n', '<leader>d', vim.diagnostic.open_float, opts)
@@ -49,7 +47,13 @@ return {
             filetypes = { "html", "templ", "htmx" }
         })
         lspconfig.htmx.setup({ filetypes = { "html", "templ" } })
-        lspconfig.cssls.setup({})
+        lspconfig.cssls.setup({
+            capabilities = (function()
+                local c = vim.lsp.protocol.make_client_capabilities()
+                c.textDocument.completion.completionItem.snippetSupport = true
+                return c
+            end)()
+        })
         lspconfig.tsserver.setup({})
         lspconfig.vuels.setup({})
         lspconfig.svelte.setup({})
