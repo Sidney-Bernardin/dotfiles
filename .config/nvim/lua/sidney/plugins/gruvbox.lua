@@ -1,5 +1,6 @@
 return {
     "morhetz/gruvbox",
+
     config = function()
         local hl = vim.api.nvim_set_hl
 
@@ -38,9 +39,12 @@ return {
         -- Other
         hl(0, 'Visual', { ctermbg = 109, ctermfg = 235, bold = true })
         hl(0, 'ColorColumn', { ctermbg = 236 })
+        hl(0, 'WinSeparator', { ctermfg = 237 })
         hl(0, 'WinBar', { ctermfg = 250 })
+        hl(0, 'WinBarNC', { ctermfg = 250 })
         hl(0, 'SignColumn', { ctermbg = 235 })
         hl(0, 'QuickFixLine', { ctermbg = 237 })
+        hl(0, 'NormalFloat', { ctermbg = 239 })
         hl(0, 'FloatBorder', { ctermbg = 239, ctermfg = 239 })
     end
 }

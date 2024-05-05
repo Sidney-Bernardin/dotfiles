@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 opt.background = 'dark'
-opt.mouse = nil
+opt.mouse = ''
 opt.laststatus = 3
 
 -- Cursor

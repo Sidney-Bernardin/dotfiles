@@ -1,5 +1,6 @@
 return {
     "gbprod/yanky.nvim",
+
     config = function()
         require("yanky").setup({
             highlight = {
@@ -7,18 +8,17 @@ return {
                 on_yank = false,
             },
         })
+    end,
 
-        local keymap = vim.keymap.set
-        local opts = { noremap = true }
-
+    keys = {
         -- Use Yanky when using paste.
-        keymap({ "n", "x" }, "p", "<Plug>(YankyPutAfter)", opts)
-        keymap({ "n", "x" }, "P", "<Plug>(YankyPutBefore)", opts)
-        keymap({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)", opts)
-        keymap({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)", opts)
+        { mode = { "n", "x" }, "p",                         "<Plug>(YankyPutAfter)" },
+        { mode = { "n", "x" }, "P",                         "<Plug>(YankyPutBefore)" },
+        { mode = { "n", "x" }, "gp",                        "<Plug>(YankyGPutAfter)" },
+        { mode = { "n", "x" }, "gP",                        "<Plug>(YankyGPutBefore)" },
 
         -- History navigation
-        keymap("n", "<A-n>", "<Plug>(YankyCycleForward)", opts)
-        keymap("n", "<A-p>", "<Plug>(YankyCycleBackward)", opts)
-    end
+        { "<A-n>",             "<Plug>(YankyCycleForward)", },
+        { "<A-p>",             "<Plug>(YankyCycleBackward)" },
+    }
 }
