@@ -20,6 +20,9 @@ fi
 
 bind '"\C-p":"~/scripts/sessionizer\n"'
 
+# NVim
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
 # Node Version Manager
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -34,6 +37,3 @@ PATH=$GOPATH/bin:$PATH:/usr/local/go/bin
 
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# Starship Prompt
-eval "$(starship init bash)"

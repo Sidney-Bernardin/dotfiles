@@ -2,9 +2,11 @@ return {
     "morhetz/gruvbox",
 
     config = function()
-        local hl = vim.api.nvim_set_hl
-
+        vim.o.termguicolors = false
         vim.cmd.colorscheme('gruvbox')
+
+
+        local hl = vim.api.nvim_set_hl
 
         -- Highlighted yank
         hl(0, 'HighlightYank', { ctermfg = 235, ctermbg = 214, bold = true })

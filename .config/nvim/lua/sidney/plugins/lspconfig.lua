@@ -54,7 +54,7 @@ return {
                 return c
             end)()
         })
-        lspconfig.tsserver.setup({})
+        lspconfig.ts_ls.setup({})
         lspconfig.vuels.setup({})
         lspconfig.svelte.setup({})
         lspconfig.pyright.setup({})
