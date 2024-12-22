@@ -18,8 +18,6 @@ fi
 
 
 
-bind '"\C-p":"~/scripts/sessionizer\n"'
-
 # NVim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 

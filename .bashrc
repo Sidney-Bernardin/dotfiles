@@ -112,5 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+
+bind '"\C-p":"~/scripts/sessionizer\n"'
+
 # Starship
 eval "$(starship init bash)"
