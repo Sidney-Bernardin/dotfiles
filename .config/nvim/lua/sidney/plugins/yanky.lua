@@ -18,7 +18,7 @@ return {
         { mode = { "n", "x" }, "gP",                        "<Plug>(YankyGPutBefore)" },
 
         -- History navigation
-        { "<A-n>",             "<Plug>(YankyCycleForward)", },
+        { "<A-n>",             "<Plug>(YankyCycleForward)" },
         { "<A-p>",             "<Plug>(YankyCycleBackward)" },
     }
 }

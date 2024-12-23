@@ -15,23 +15,3 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-
-
-# NVim
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
-# Node Version Manager
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Golang
-GOPATH=$HOME/go
-PATH=$GOPATH/bin:$PATH:/usr/local/go/bin
-
-# Rust
-. "$HOME/.cargo/env"
-
-# FZF
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

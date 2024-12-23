@@ -112,9 +112,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-
+# Sessionizer
 bind '"\C-p":"~/scripts/sessionizer\n"'
 
 # Starship
 eval "$(starship init bash)"
+
+# FZF
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# NVim
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# Golang
+GOPATH=$HOME/go
+PATH=$GOPATH/bin:$PATH:/usr/local/go/bin
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Rust
+. "$HOME/.cargo/env"
