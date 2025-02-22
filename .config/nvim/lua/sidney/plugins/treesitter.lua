@@ -13,7 +13,7 @@ return {
             indent = { enable = true },
             highlight = {
                 enable = true,
-                disable = { 'html', 'css', 'scss', 'vue' },
+                disable = { "html", "css", "scss", "vue" },
             }
         })
     end

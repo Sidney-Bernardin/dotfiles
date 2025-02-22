@@ -1,11 +1,11 @@
 return {
-    'kristijanhusak/vim-dadbod-ui',
+    "kristijanhusak/vim-dadbod-ui",
 
     dependencies = {
-        { 'tpope/vim-dadbod', },
+        { "tpope/vim-dadbod", },
         {
-            'kristijanhusak/vim-dadbod-completion',
-            ft = { 'sql', 'mysql', 'plsql' },
+            "kristijanhusak/vim-dadbod-completion",
+            ft = { "sql", "mysql", "plsql" },
         },
     },
 
@@ -14,7 +14,8 @@ return {
     end,
 
     keys = {
-        -- Quick open
+
+        -- Toggle UI
         { "<leader>db", ":DBUIToggle<CR>" },
     }
 }

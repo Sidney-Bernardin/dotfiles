@@ -7,11 +7,11 @@ return {
 
     config = function()
         local luasnip = require("luasnip")
-        local types = require('luasnip.util.types')
+        local types = require("luasnip.util.types")
 
         luasnip.config.set_config({
             history = true,
-            updateevents = 'TextChanged,TextChangedI',
+            updateevents = "TextChanged,TextChangedI",
             enable_autosnippets = true,
             ext_opts = {
                 [types.choiceNode] = {
@@ -27,43 +27,42 @@ return {
 
     keys = function()
         local luasnip = require("luasnip")
-        local opts = { noremap = true, silent = true }
 
         return {
             -- Next node
             {
-                mode = { 'i', 's' },
-                '<C-j>',
+                mode = { "i", "s" },
+                "<C-j>",
                 function()
                     if luasnip.expand_or_jumpable() then
                         luasnip.expand_or_jump()
                     end
                 end,
-                opts
+               { noremap = true, silent = true }
             },
 
             -- Pevious node
             {
-                mode = { 'i', 's' },
-                '<C-k>',
+                mode = { "i", "s" },
+                "<C-k>",
                 function()
                     if luasnip.jumpable(-1) then
                         luasnip.jump(-1)
                     end
                 end,
-                opts
+               { noremap = true, silent = true }
             },
 
             -- Next choice
             {
-                mode = { 'i' },
-                '<C-l>',
+                mode = { "i" },
+                "<C-l>",
                 function()
                     if luasnip.choice_active() then
                         luasnip.change_choice(1)
                     end
                 end,
-                opts
+               { noremap = true, silent = true }
             },
         }
     end

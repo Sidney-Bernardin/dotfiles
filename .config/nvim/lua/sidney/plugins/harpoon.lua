@@ -10,6 +10,7 @@ return {
     end,
 
     keys = {
+
         -- Mark file
         { "<A-m>", ":lua require('harpoon.mark').add_file()<CR>" },
 

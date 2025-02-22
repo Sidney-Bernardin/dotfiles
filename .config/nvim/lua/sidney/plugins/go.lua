@@ -1,9 +1,11 @@
 return {
     "ray-x/go.nvim",
 
-    dependencies = { -- optional packages
+    dependencies = {
         "ray-x/guihua.lua",
     },
 
-    config = true,
+    config = function()
+        require("go").setup()
+    end
 }

@@ -12,8 +12,8 @@ local lualine_config = {
                 z = { bg = colors.bg, fg = colors.fg },
             },
         },
-        section_separators = '',
-        component_separators = '',
+        section_separators = "",
+        component_separators = "",
     },
     sections = {
         lualine_b = {},
@@ -23,20 +23,20 @@ local lualine_config = {
 
         lualine_a = {
             {
-                'branch',
-                icon = '',
+                "branch",
+                icon = "",
                 padding = { left = 1, right = 4 }
             },
             {
-                'diff',
+                "diff",
                 padding = { left = 1, right = 4 }
             },
             {
-                'diagnostics',
+                "diagnostics",
                 padding = { left = 1, right = 4 }
             },
             {
-                'filetype',
+                "filetype",
                 icon_only = true,
                 colored = false,
                 padding = { left = 1 },
@@ -47,7 +47,7 @@ local lualine_config = {
                 end
             },
             {
-                'filename',
+                "filename",
                 path = 1,
                 color = function()
                     if vim.bo.modified then
@@ -58,11 +58,11 @@ local lualine_config = {
         },
         lualine_z = {
             {
-                'progress',
+                "progress",
                 padding = { left = 4, right = 1 }
             },
             {
-                'location',
+                "location",
                 padding = { right = 1 }
             },
         },
@@ -71,7 +71,7 @@ local lualine_config = {
 
 return {
     "nvim-lualine/lualine.nvim",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         require("lualine").setup(lualine_config)
     end
