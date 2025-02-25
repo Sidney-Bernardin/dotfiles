@@ -1,10 +1,9 @@
 return {
     "L3MON4D3/LuaSnip",
-
+    version = "v2.*",
     dependencies = {
         "rafamadriz/friendly-snippets",
     },
-
     config = function()
         local luasnip = require("luasnip")
         local types = require("luasnip.util.types")
@@ -24,36 +23,22 @@ return {
 
         require("luasnip.loaders.from_vscode").lazy_load()
     end,
-
     keys = function()
         local luasnip = require("luasnip")
 
         return {
-            -- Next node
             {
                 mode = { "i", "s" },
                 "<C-j>",
-                function()
-                    if luasnip.expand_or_jumpable() then
-                        luasnip.expand_or_jump()
-                    end
-                end,
-               { noremap = true, silent = true }
+                function() luasnip.jump(1) end,
+                { silent = true }
             },
-
-            -- Pevious node
             {
                 mode = { "i", "s" },
                 "<C-k>",
-                function()
-                    if luasnip.jumpable(-1) then
-                        luasnip.jump(-1)
-                    end
-                end,
-               { noremap = true, silent = true }
+                function() luasnip.jump(-1) end,
+                { silent = true }
             },
-
-            -- Next choice
             {
                 mode = { "i" },
                 "<C-l>",
@@ -62,7 +47,7 @@ return {
                         luasnip.change_choice(1)
                     end
                 end,
-               { noremap = true, silent = true }
+                { silent = true }
             },
         }
     end

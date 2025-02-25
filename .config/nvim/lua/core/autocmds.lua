@@ -1,8 +1,8 @@
-local general_auto_group = vim.api.nvim_create_augroup("MyGeneralGroup", { clear = true })
+local core_auto_group = vim.api.nvim_create_augroup("CoreGroup", { clear = true })
 
 -- Highlights yanked lines
 vim.api.nvim_create_autocmd("TextYankPost", {
-    group = general_auto_group,
+    group = core_auto_group,
     callback = function()
         vim.highlight.on_yank({ higroup = "HighlightYank", timeout = 300 })
     end,
@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Sets winbar only when multiple windows are open
 vim.api.nvim_create_autocmd("WinEnter", {
-    group = general_auto_group,
+    group = core_auto_group,
     callback = function()
         if vim.bo.filetype == "" then return end
 

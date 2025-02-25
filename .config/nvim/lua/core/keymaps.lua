@@ -7,12 +7,6 @@ vim.keymap.set("n", "<leader>s", ":w<CR>", { noremap = true })
 vim.keymap.set("n", "<C-n>", ":bnext<CR>", { noremap = true })
 vim.keymap.set("n", "<C-p>", ":bprev<CR>", { noremap = true })
 
--- Window navigation
-vim.keymap.set("n", "<leader>h", ":wincmd h<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>j", ":wincmd j<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>k", ":wincmd k<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>l", ":wincmd l<CR>", { noremap = true })
-
 -- Quickfix List navigation
 vim.keymap.set("n", "<C-j>", ":cnext<CR>zz", { noremap = true })
 vim.keymap.set("n", "<C-k>", ":cprev<CR>zz", { noremap = true })

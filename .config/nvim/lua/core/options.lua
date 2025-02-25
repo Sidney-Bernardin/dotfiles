@@ -2,6 +2,11 @@ vim.opt.background = "dark"
 vim.opt.mouse = ""
 vim.opt.laststatus = 3
 
+vim.fn.sign_define("DiagnosticSignError", { texthl = "DiagnosticSignError", text = "", numhl = "" })
+vim.fn.sign_define("DiagnosticSignWarn", { texthl = "DiagnosticSignWarn", text = "", numhl = "" })
+vim.fn.sign_define("DiagnosticSignInfo", { texthl = "DiagnosticSignInfo", text = "", numhl = "" })
+vim.fn.sign_define("DiagnosticSignHint", { texthl = "DiagnosticSignHint", text = "", numhl = "" })
+
 -- Cursor
 vim.opt.scrolloff = 8
 vim.opt.guicursor = ""
