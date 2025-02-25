@@ -7,6 +7,25 @@ return {
         },
     },
     {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        opts = {
+            delay = 1000,
+            icons = {
+                mappings = false,
+            },
+        },
+        keys = {
+            {
+                "<leader>?",
+                function()
+                    require("which-key").show({ global = false })
+                end,
+                desc = "Buffer Local Keymaps (which-key)",
+            },
+        },
+    },
+    {
         "hrsh7th/nvim-cmp",
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
@@ -34,12 +53,19 @@ return {
                 }),
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
-                    { name = "luasnip" },
                     { name = "nvim_lua" },
-                    -- { name = "codeium" },
+                    { name = "codeium" },
+                    { name = "luasnip" },
                 }, {
                     { name = "buffer" },
                 }),
+            })
+
+            cmp.setup.filetype({ "sql" }, {
+                sources = {
+                    { name = "vim-dadbod-completion" },
+                    { name = "buffer" },
+                },
             })
 
             cmp.setup.cmdline({ "/", "?" }, {

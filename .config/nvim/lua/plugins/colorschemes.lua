@@ -8,8 +8,10 @@ return {
             local p = require("gruvbox").palette
 
             vim.api.nvim_set_hl(0, "HighlightYank", { bg = p.bright_yellow, fg = p.dark0, bold = true })
-            vim.api.nvim_set_hl(0, "SignColumn", { bg = nil, fg = p.dark0_soft })
+            vim.api.nvim_set_hl(0, "IndentLine", { bg = nil, fg = p.dark0_soft })
+            vim.api.nvim_set_hl(0, "SignColumn", { bg = nil, fg = p.light1 })
             vim.api.nvim_set_hl(0, "ColorColumn", { bg = p.dark0_soft })
+            vim.api.nvim_set_hl(0, "LightBulbSign", { link = "LineNr" })
 
             vim.api.nvim_set_hl(0, "CursorLine", { bg = nil })
             vim.api.nvim_set_hl(0, "CursorLineNr", { bg = nil, fg = p.bright_yellow })

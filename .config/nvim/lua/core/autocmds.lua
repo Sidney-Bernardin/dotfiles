@@ -12,12 +12,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("WinEnter", {
     group = core_auto_group,
     callback = function()
-        if vim.bo.filetype == "" then return end
+        if vim.bo.filetype == "" then
+            return
+        end
 
         if #vim.api.nvim_list_wins() > 1 then
             vim.opt.winbar = "  %t %(%m %)"
         else
             vim.opt.winbar = nil
         end
-    end
+    end,
 })

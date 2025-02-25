@@ -8,9 +8,9 @@ return {
             branch = p.bright_purple,
             unsaved = p.light0_hard,
             theme = {
-                insert = { a = { fg = p.dark0, bg = p.neutral_blue } },
-                visual = { a = { fg = p.dark0, bg = p.neutral_blue } },
-                replace = { a = { fg = p.dark0, bg = p.neutral_blue } },
+                visual = { a = { fg = p.dark0, bg = p.light0 } },
+                replace = { a = { fg = p.dark0, bg = p.light0 } },
+                insert = { a = { fg = p.dark0, bg = p.bright_yellow } },
                 normal = {
                     a = { fg = p.dark0, bg = p.neutral_yellow },
                     b = { fg = p.light2, bg = p.dark1 },

@@ -12,6 +12,16 @@ return {
         },
     },
     {
+        "kosayoda/nvim-lightbulb",
+        opts = {
+            autocmd = { enabled = true },
+            sign = {
+                enabled = true,
+                text = "",
+            },
+        },
+    },
+    {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require("lspconfig")
@@ -35,20 +45,25 @@ return {
                         })
                     end
 
-                    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { noremap = true })
-                    vim.keymap.set("n", "<leader>i", vim.lsp.buf.hover, { noremap = true })
-                    vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { noremap = true })
-                    vim.keymap.set("n", "<leader>gt", vim.lsp.buf.type_definition, { noremap = true })
-                    vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { noremap = true })
-                    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { noremap = true })
-                    vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { noremap = true })
-
-                    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true })
-                    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true })
-                    vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { noremap = true })
-                    vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { noremap = true })
+                    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action" })
+                    vim.keymap.set("n", "<leader>i", vim.lsp.buf.hover, { desc = "LSP hover info" })
+                    vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "LSP definition" })
+                    vim.keymap.set("n", "<leader>gt", vim.lsp.buf.type_definition, { desc = "LSP type definition" })
+                    vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { desc = "LSP implementation" })
+                    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP rename" })
+                    vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "LSP format" })
+                    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Diagnostic prev" })
+                    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Diagnostic next" })
+                    vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Diagnostic float" })
+                    vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostic to list" })
                 end,
             })
+
+            lspconfig.templ.setup({})
+            lspconfig.ts_ls.setup({})
+            lspconfig.eslint.setup({})
+            lspconfig.pyright.setup({})
+            lspconfig.gdscript.setup({})
 
             lspconfig.lua_ls.setup({
                 settings = {
@@ -59,6 +74,7 @@ return {
                     },
                 },
             })
+
             lspconfig.gopls.setup({
                 settings = {
                     gopls = {
@@ -68,17 +84,26 @@ return {
                     },
                 },
             })
+
+            lspconfig.emmet_ls.setup({
+                filetypes = { "html", "templ", "htmx" },
+            })
+
+            lspconfig.htmx.setup({
+                filetypes = { "html", "templ" },
+            })
+
+            lspconfig.cssls.setup({
+                capabilities = (function()
+                    local c = vim.lsp.protocol.make_client_capabilities()
+                    c.textDocument.completion.completionItem.snippetSupport = true
+                    return c
+                end)(),
+            })
+
+            lspconfig.rust_analyzer.setup({
+                cmd = { "rustup", "run", "stable", "rust-analyzer" },
+            })
         end,
-    },
-    {
-        "kosayoda/nvim-lightbulb",
-        opts = {
-            autocmd = { enabled = true },
-            sign = {
-                enabled = true,
-                text = "",
-                hl = "LineNr",
-            },
-        },
     },
 }
