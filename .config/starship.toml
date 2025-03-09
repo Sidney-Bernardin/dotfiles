@@ -1,44 +1,5 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
-format = """
-$username\
-$hostname\
-
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
-$directory\
-$vcsh\
-$fossil_branch\
-$fossil_metrics\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-$hg_branch\
-$pijul_channel\
-$docker_context\
-
-$direnv\
-$env_var\
-$crystal\
-$custom\
-$sudo\
-$cmd_duration\
-$line_break\
-$jobs\
-$battery\
-$time\
-$status\
-$os\
-$container\
-$shell\
-$character
-"""
-right_format = """$all"""
-
 [aws]
 symbol = "  "
 
@@ -86,6 +47,7 @@ tag_symbol = '  '
 
 [golang]
 symbol = " "
+disabled = true
 
 [guix_shell]
 symbol = " "
@@ -128,6 +90,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+disabled = true
 
 [ocaml]
 symbol = " "
@@ -181,6 +144,7 @@ Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
+disabled = true
 
 [perl]
 symbol = " "

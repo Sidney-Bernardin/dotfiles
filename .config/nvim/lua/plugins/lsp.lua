@@ -64,6 +64,7 @@ return {
             lspconfig.eslint.setup({})
             lspconfig.pyright.setup({})
             lspconfig.gdscript.setup({})
+            lspconfig.taplo.setup({})
 
             lspconfig.lua_ls.setup({
                 settings = {
