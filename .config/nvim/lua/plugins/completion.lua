@@ -14,6 +14,9 @@ return {
             icons = {
                 mappings = false,
             },
+            win = {
+                border = "rounded"
+            }
         },
         keys = {
             {
@@ -39,6 +42,10 @@ return {
             local cmp = require("cmp")
 
             cmp.setup({
+                window = {
+                    completion = cmp.config.window.bordered(),
+                    documentation = cmp.config.window.bordered(),
+                },
                 snippet = {
                     expand = function(args)
                         require("luasnip").lsp_expand(args.body)

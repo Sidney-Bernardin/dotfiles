@@ -16,7 +16,7 @@ return {
             dap.listeners.after.event_terminated["dapui_config"] = function() dapui.close() end
             dap.listeners.after.event_exited["dapui_config"] = function() dapui.close() end
 
-            vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
+            -- vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
             vim.fn.sign_define("DapBreakpoint", { text = "" })
         end,
         keys = function()

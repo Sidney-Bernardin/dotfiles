@@ -3,6 +3,8 @@ return {
         "williamboman/mason.nvim",
         opts = {
             ui = {
+                border = "rounded",
+                backdrop = 100,
                 icons = {
                     package_installed = "✓",
                     package_pending = "➜",
@@ -60,6 +62,7 @@ return {
             })
 
             lspconfig.templ.setup({})
+            -- lspconfig.htmx.setup({})
             lspconfig.ts_ls.setup({})
             lspconfig.eslint.setup({})
             lspconfig.pyright.setup({})
@@ -88,10 +91,6 @@ return {
 
             lspconfig.emmet_ls.setup({
                 filetypes = { "html", "templ", "htmx" },
-            })
-
-            lspconfig.htmx.setup({
-                filetypes = { "html", "templ" },
             })
 
             lspconfig.cssls.setup({

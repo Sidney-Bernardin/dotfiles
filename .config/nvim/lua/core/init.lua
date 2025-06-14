@@ -24,4 +24,8 @@ require("core.autocmds")
 require("lazy").setup({
     spec = { { import = "plugins" } },
     checker = { enabled = true },
+    ui = {
+        border = "rounded",
+        backdrop = 100,
+    },
 })

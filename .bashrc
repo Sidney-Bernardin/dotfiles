@@ -119,10 +119,10 @@ bind '"\C-p":"~/scripts/sessionizer\n"'
 eval "$(starship init bash)"
 
 # FZF
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. /usr/share/doc/fzf/examples/key-bindings.bash 
 
 # NVim
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # Golang
 GOPATH=$HOME/go
