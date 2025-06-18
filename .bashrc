@@ -76,16 +76,16 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 #alias ll='ls -l'
@@ -112,26 +112,39 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Sessionizer
-bind '"\C-p":"~/scripts/sessionizer\n"'
-
-# Starship
-eval "$(starship init bash)"
+# Prompt
+function arrow {
+    if [[ $? -eq 0 ]]; then
+        echo -e '\e[1;33m󱞩'
+    else
+        echo -e '\e[1;31m󱞩'
+    fi
+}
+PS1='\n${debian_chroot:+($debian_chroot)}'
+PS1+='\e[32m  \u '
+PS1+='\e[34m  \w '
+PS1+='$(__git_ps1 "\e[35m  %s ")'
+PS1+='\n'
+PS1+=' $(arrow) '
+PS1+='\e[0m'
 
 # FZF
 . /usr/share/doc/fzf/examples/key-bindings.bash 
 
-# NVim
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+# Sessionizer
+bind '"\C-p":"~/scripts/sessionizer\n"'
 
 # Golang
 GOPATH=$HOME/go
 PATH=$GOPATH/bin:$PATH:/usr/local/go/bin
+
+# Rust
+. "$HOME/.cargo/env"
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Rust
-. "$HOME/.cargo/env"
+# NeoVim
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
