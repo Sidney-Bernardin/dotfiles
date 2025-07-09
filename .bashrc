@@ -121,11 +121,11 @@ function arrow {
     fi
 }
 PS1='\n${debian_chroot:+($debian_chroot)}'
-PS1+='\e[32m  \u '
-PS1+='\e[34m  \w '
-PS1+='$(__git_ps1 "\e[35m  %s ")'
+PS1+='\e[32m \u  '
+PS1+='\e[34m \w  '
+PS1+='$(__git_ps1 "\e[35m %s  ")'
 PS1+='\n'
-PS1+=' $(arrow) '
+PS1+='$(arrow) '
 PS1+='\e[0m'
 
 # FZF
