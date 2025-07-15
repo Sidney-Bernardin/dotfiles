@@ -148,3 +148,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # NeoVim
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# Created by `pipx` on 2025-07-15 23:19:52
+export PATH="$PATH:/home/sidney/.local/bin"
