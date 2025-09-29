@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 vim.keymap.set("n", "<leader>s", ":w<CR>", { desc = "Save" })
 
 vim.keymap.set("n", "<C-n>", ":bnext<CR>", { desc = "Buffer next" })

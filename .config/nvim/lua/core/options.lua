@@ -1,11 +1,10 @@
 vim.opt.background = "dark"
 vim.opt.mouse = ""
 vim.opt.laststatus = 3
+vim.opt.winborder = "rounded"
 
-vim.fn.sign_define("DiagnosticSignError", { texthl = "DiagnosticSignError", text = "", numhl = "" })
-vim.fn.sign_define("DiagnosticSignWarn", { texthl = "DiagnosticSignWarn", text = "", numhl = "" })
-vim.fn.sign_define("DiagnosticSignInfo", { texthl = "DiagnosticSignInfo", text = "", numhl = "" })
-vim.fn.sign_define("DiagnosticSignHint", { texthl = "DiagnosticSignHint", text = "", numhl = "" })
+vim.opt.list = true
+vim.opt.listchars = { tab = "| ", trail = "·", nbsp = "_" }
 
 -- Cursor
 vim.opt.scrolloff = 8
