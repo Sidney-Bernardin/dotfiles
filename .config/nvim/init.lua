@@ -80,8 +80,8 @@ vim.lsp.config("vtsls", {
                 globalPlugins = {
                     {
                         name = '@vue/typescript-plugin',
-                        location = vim.fn.expand '$MASON/packages' ..
-                            '/vue-language-server' .. '/node_modules/@vue/language-server',
+                        location = vim.fn.stdpath('data') ..
+                            "/mason/packages/vue-language-server/node_modules/@vue/language-server",
                         languages = { 'vue' },
                         configNamespace = 'typescript',
                     },
@@ -254,11 +254,6 @@ require("telescope").setup({
     extensions = {
         file_browser = {
             hijack_netrw = true,
-            mappings = {
-                ["i"] = {
-                    ["<C-h>"] = require("telescope._extensions.file_browser.actions").goto_home_dir,
-                },
-            },
         },
     },
 })
