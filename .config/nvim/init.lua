@@ -313,7 +313,6 @@ end, { noremap = true })
 vim.cmd([[nnoremap <expr> <C-d> (winheight(0) / 3) . "<C-d>"]])
 vim.cmd([[nnoremap <expr> <C-u> (winheight(0) / 3) . "<C-u>"]])
 
--- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
@@ -323,10 +322,8 @@ vim.keymap.set('n', '<leader>fr', builtin.registers)
 vim.keymap.set('n', '<leader>fm', builtin.lsp_document_symbols)
 vim.keymap.set('n', '<bs>', ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
 
--- Dadbod
 vim.keymap.set('n', '<leader>DB', ":DBUIToggle<CR>")
 
--- Which Key
 vim.keymap.set('n', '<leader>?', function()
     require("which-key").show({ global = false })
 end)
