@@ -140,8 +140,9 @@ vim.diagnostic.config({
 -- PLUGINS
 
 vim.pack.add({
-    "https://github.com/rose-pine/neovim",
+    "https://github.com/vague2k/vague.nvim",
 
+    "https://github.com/nvim-tree/nvim-web-devicons",
     "https://github.com/nvim-treesitter/nvim-treesitter",
     "https://github.com/nvim-treesitter/nvim-treesitter-context",
 
@@ -171,21 +172,17 @@ vim.pack.add({
     "https://github.com/nvim-telescope/telescope-file-browser.nvim",
 })
 
-require("rose-pine").setup({
-    styles = {
-        transparency = true,
-        italic = false,
-    },
-    highlight_groups = {
-        CursorLine = { bg = "none" },
-        TreesitterContext = { bg = "surface" },
-        TreesitterContextLineNumber = { bg = "surface", fg = "rose" },
-    },
+require("vague").setup({
+    transparent = true,
+    italic = false,
 })
 
 require("nvim-treesitter.configs").setup({
     indent = { enable = true },
-    highlight = { enable = true },
+    highlight = {
+        enable = true,
+        disable = { "vue", "css", "scss" }
+    },
 })
 
 require("blink.cmp").setup({
@@ -341,6 +338,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 
 -- =============================================================================
--- COLORSCHEME
+-- COLORS
 
-vim.cmd([[colorscheme rose-pine]])
+vim.cmd([[colorscheme vague]])
+
+vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })

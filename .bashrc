@@ -115,18 +115,18 @@ fi
 # Prompt
 function arrow {
     if [[ $? -eq 0 ]]; then
-        echo -e '\e[1;33m󱞩'
+        echo -e '\e[1;33m$'
     else
-        echo -e '\e[1;31m󱞩'
+        echo -e '\e[1;31m$'
     fi
 }
-PS1='\n${debian_chroot:+($debian_chroot)}'
-PS1+='\e[32m \u  '
-PS1+='\e[34m \w  '
-PS1+='$(__git_ps1 "\e[35m %s  ")'
+ps1_len=${#PS1}
+PS1=${PS1:0:ps1_len-3}
+PS1+='$(__git_ps1 ":\e[1;35m%s")'
 PS1+='\n'
 PS1+='$(arrow) '
 PS1+='\e[0m'
+PS1="\n${PS1}"
 
 # FZF
 . /usr/share/doc/fzf/examples/key-bindings.bash 
