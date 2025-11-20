@@ -9,7 +9,7 @@ return {
                 transparent = true,
                 italic = false,
             })
-            vim.cmd([[colorscheme vague]])
+            vim.cmd("colorscheme vague")
         end,
     },
     {

@@ -1,12 +1,13 @@
 vim.lsp.enable({
     "lua_ls",
     "gopls",
+    "pyright",
+
     "html",
     "cssls",
 
     "vtsls",
     "vue_ls",
-    "pyright",
 })
 
 vim.lsp.config("lua_ls", {

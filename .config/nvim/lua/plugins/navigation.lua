@@ -1,5 +1,23 @@
 return {
     {
+        "Sidney-Bernardin/tesser.nvim",
+        -- dir = "~/projects/neovim_plugins/tesser.nvim",
+        config = function()
+            local tesser = require("tesser")
+
+            for key in tesser.keys:gmatch(".") do
+                vim.keymap.set("n",
+                    ("<M-%s>"):format(key),
+                    function() tesser.open(key) end,
+                    { noremap = true })
+
+                vim.keymap.set("n",
+                    ("<leader><leader>%s"):format(key),
+                    function() tesser.set(key) end)
+            end
+        end,
+    },
+    {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.9",
         dependencies = {
@@ -37,6 +55,7 @@ return {
                 { "<leader>fr", builtin.registers },
                 { "<leader>fm", builtin.lsp_document_symbols },
                 { "<bs>",       ":Telescope file_browser path=%:p:h select_buffer=true<CR>" },
+                { "<leader>fc", ":Telescope find_files cwd=~/.config/nvim<CR>" }
             }
         end,
     },

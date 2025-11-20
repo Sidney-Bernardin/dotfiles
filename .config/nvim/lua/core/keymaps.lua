@@ -27,10 +27,12 @@ vim.keymap.set("n", "<C-w>%", ":vsplit<CR>")
 vim.keymap.set("n", "<C-w>\"", ":split<CR>")
 
 --
+vim.keymap.set("n", "<leader>ll", ":so %<CR>")
+vim.keymap.set("n", "<leader>l", ":.lua<CR>")
+vim.keymap.set("v", "<leader>l", ":lua<CR>")
 
 vim.keymap.set("n", "<leader>s", ":w<CR>")
 vim.keymap.set("x", "<leader>p", '"_dP', { noremap = true })
-vim.keymap.set("n", "<leader>,", ":e ~/.config/nvim/init.lua<CR>")
 
 vim.keymap.set('n', '<leader>DB', ":DBUIToggle<CR>")
 
