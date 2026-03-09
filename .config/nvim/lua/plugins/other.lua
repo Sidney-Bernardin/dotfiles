@@ -14,11 +14,13 @@ return {
     },
     {
         "nvim-treesitter/nvim-treesitter",
-        opts = {
-            auto_install = true,
-            indent = { enable = true },
-            highlight = { enable = true },
-        },
+        config = function()
+            require("nvim-treesitter.configs").setup({
+                auto_install = true,
+                indent = { enable = true },
+                highlight = { enable = true },
+            })
+        end,
     },
     {
         "nvim-treesitter/nvim-treesitter-context",
@@ -99,7 +101,6 @@ return {
             dap.listeners.after.event_initialized["dapui_config"] = function() dapui.open() end
             dap.listeners.after.event_terminated["dapui_config"] = function() dapui.close() end
             dap.listeners.after.event_exited["dapui_config"] = function() dapui.close() end
-            vim.fn.sign_define("DapBreakpoint", { text = "" })
         end,
         keys = function()
             local dap = require("dap")

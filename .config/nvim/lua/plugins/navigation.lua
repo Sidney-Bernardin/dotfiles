@@ -5,7 +5,9 @@ return {
         config = function()
             local tesser = require("tesser")
 
-            for key in tesser.keys:gmatch(".") do
+            vim.keymap.set("n", "<leader>t", tesser.edit)
+
+            for key in tesser.keys() do
                 vim.keymap.set("n",
                     ("<M-%s>"):format(key),
                     function() tesser.open(key) end,

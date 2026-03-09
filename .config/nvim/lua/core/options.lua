@@ -1,31 +1,32 @@
-vim.opt.background = "dark"
-vim.opt.mouse = ""
-vim.opt.winborder = "rounded"
-vim.opt.hlsearch = false
+local x = vim.opt
 
-vim.opt.list = true
-vim.opt.listchars = { tab = "| ", trail = "·", nbsp = "_" }
+x.background = "dark"
+x.mouse = ""
+x.winborder = "rounded"
+x.hlsearch = false
 
-vim.opt.guicursor = ""
-vim.opt.cursorline = true
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 15
+x.smartindent = true
+x.expandtab = true
+x.tabstop = 4
+x.softtabstop = 4
+x.shiftwidth = 4
 
-vim.opt.wrap = false
-vim.opt.cc = "80"
+x.list = true
+x.listchars = { tab = "| ", trail = "·", nbsp = "_" }
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "yes"
+x.guicursor = ""
+x.cursorline = true
+x.scrolloff = 8
+x.sidescrolloff = 15
 
-vim.opt.smartindent = true
-vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+x.wrap = false
+x.cc = "80"
 
-vim.opt.backup = false
-vim.opt.writebackup = false
-vim.opt.swapfile = false
-vim.opt.undofile = true
+x.nu = true
+x.relativenumber = true
+x.signcolumn = "yes"
+
+x.backup = false
+x.writebackup = false
+x.swapfile = false
+x.undofile = true

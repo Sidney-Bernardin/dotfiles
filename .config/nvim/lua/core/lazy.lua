@@ -23,4 +23,7 @@ require("lazy").setup({
         path = "~/projects/neovim_plugins",
         fallback = true,
     },
+    ui = {
+        border = "rounded"
+    },
 })
