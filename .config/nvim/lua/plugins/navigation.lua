@@ -5,17 +5,27 @@ return {
         config = function()
             local tesser = require("tesser")
 
+            tesser.setup({
+                keys = {
+                    "jkl;",
+                    "fdsa",
+                    "1234567890",
+                },
+            })
+
             vim.keymap.set("n", "<leader>t", tesser.edit)
 
             for key in tesser.keys() do
                 vim.keymap.set("n",
                     ("<M-%s>"):format(key),
                     function() tesser.open(key) end,
-                    { noremap = true })
+                    { noremap = true }
+                )
 
                 vim.keymap.set("n",
                     ("<leader><leader>%s"):format(key),
-                    function() tesser.set(key) end)
+                    function() tesser.set(key) end
+                )
             end
         end,
     },

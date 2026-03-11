@@ -78,17 +78,22 @@ return {
             local cwd = vim.uv.cwd()
             local basename = vim.fs.basename(cwd)
             _99.setup({
-                model = "",
-
+                -- provider = _99.Providers.ClaudeCodeProvider,  -- default: OpenCodeProvider
+                model = "opencode/big-pickle",
                 logger = {
                     level = _99.DEBUG,
                     path = "/tmp/" .. basename .. ".99.debug",
                     print_on_error = true,
                 },
+                -- When setting this to something that is not inside the CWD tools
+                -- such as claude code or opencode will have permission issues
+                -- and generation will fail refer to tool documentation to resolve
+                -- https://opencode.ai/docs/permissions/#external-directories
+                -- https://code.claude.com/docs/en/permissions#read-and-edit
+                tmp_dir = "./tmp",
 
-                --- A new feature that is centered around tags
+                --- Completions: #rules and @files in the prompt buffer
                 completion = {
-                    --- Defaults to .cursor/rules
                     -- I am going to disable these until i understand the
                     -- problem better.  Inside of cursor rules there is also
                     -- application rules, which means i need to apply these
@@ -111,9 +116,20 @@ return {
                         "scratch/custom_rules/",
                     },
 
-                    --- What autocomplete do you use.  We currently only
-                    --- support cmp right now
-                    source = "cmp",
+                    --- Configure @file completion (all fields optional, sensible defaults)
+                    files = {
+                        -- enabled = true,
+                        -- max_file_size = 102400,     -- bytes, skip files larger than this
+                        -- max_files = 5000,            -- cap on total discovered files
+                        -- exclude = { ".env", ".env.*", "node_modules", ".git", ... },
+                    },
+                    --- File Discovery:
+                    --- - In git repos: Uses `git ls-files` which automatically respects .gitignore
+                    --- - Non-git repos: Falls back to filesystem scanning with manual excludes
+                    --- - Both methods apply the configured `exclude` list on top of gitignore
+
+                    --- What autocomplete engine to use. Defaults to native (built-in) if not specified.
+                    source = nil, -- "native" (default), "cmp", or "blink"
                 },
 
                 --- WARNING: if you change cwd then this is likely broken
@@ -130,13 +146,6 @@ return {
                 },
             })
 
-            -- Create your own short cuts for the different types of actions
-            vim.keymap.set("n", "<leader>9ff", function()
-                _99.fill_in_function()
-            end)
-            vim.keymap.set("n", "<leader>9fp", function()
-                _99.fill_in_function_prompt()
-            end)
             -- take extra note that i have visual selection only in v mode
             -- technically whatever your last visual selection is, will be used
             -- so i have this set to visual mode so i dont screw up and use an
@@ -147,21 +156,14 @@ return {
             vim.keymap.set("v", "<leader>9v", function()
                 _99.visual()
             end)
-            vim.keymap.set("v", "<leader>9vp", function()
-                _99.visual_prompt()
-            end)
 
             --- if you have a request you dont want to make any changes, just cancel it
-            vim.keymap.set("v", "<leader>9s", function()
+            vim.keymap.set("n", "<leader>9x", function()
                 _99.stop_all_requests()
             end)
 
-            --- Example: Using rules + actions for custom behaviors
-            --- Create a rule file like ~/.rules/debug.md that defines custom behavior.
-            --- For instance, a "debug" rule could automatically add printf statements
-            --- throughout a function to help debug its execution flow.
-            vim.keymap.set("n", "<leader>9fd", function()
-                _99.fill_in_function()
+            vim.keymap.set("n", "<leader>9s", function()
+                _99.search()
             end)
         end,
     },
