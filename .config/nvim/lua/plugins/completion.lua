@@ -25,7 +25,11 @@ return {
     {
         "saghen/blink.cmp",
         opts = {
-            keymap = { preset = "enter" },
+            keymap = {
+                preset = "enter",
+                ["<C-j>"] = { "snippet_forward", "fallback" },
+                ["<C-k>"] = { "snippet_backward", "fallback" },
+            },
             completion = { documentation = { auto_show = true } },
             fuzzy = { implementation = "lua" },
             sources = {
@@ -53,7 +57,7 @@ return {
             },
             formatters = {
                 black = {
-                    append_args = { "--line-length", "1000" },
+                    append_args = { "--line-length", "100" },
                 }
             }
         },
@@ -165,6 +169,21 @@ return {
             vim.keymap.set("n", "<leader>9s", function()
                 _99.search()
             end)
+        end,
+    },
+    {
+        "github/copilot.vim",
+        setup = true,
+        init = function()
+            vim.g.copilot_no_tab_map = true
+        end,
+        config = function()
+            vim.keymap.set(
+                "i",
+                [[<C-a>]],
+                [[ copilot#Accept("<CR>") ]],
+                { expr = true, replace_keycodes = false }
+            )
         end,
     },
 }

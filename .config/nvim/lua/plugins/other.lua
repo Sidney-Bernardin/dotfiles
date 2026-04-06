@@ -14,6 +14,7 @@ return {
     },
     {
         "nvim-treesitter/nvim-treesitter",
+        dependencies = { "geigerzaehler/tree-sitter-jinja2" },
         config = function()
             require("nvim-treesitter.configs").setup({
                 auto_install = true,
